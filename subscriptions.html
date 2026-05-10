@@ -80,6 +80,7 @@
   }
 }
 </script>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1390,7 +1391,8 @@ body {
   justify-content: center;
 }
 .size-card:hover { border-color: rgba(94, 205, 214, 0.35); background: var(--glass-hover); }
-.size-card.selected { border-color: var(--card-border-active); background: var(--card-bg-active); }
+.size-card.selected { border-color: var(--aqua-deep); background: rgba(43, 168, 181, 0.25); box-shadow: 0 0 0 1px var(--aqua-deep); }
+.size-card.selected .size-name { color: var(--ocean); }
 .size-name { font-weight: 900; font-size: 1.15rem; color: var(--navy); display: block; margin-bottom: 6px; }
 .size-examples { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; display: block; line-height: 1.4; }
 
@@ -1439,7 +1441,8 @@ body {
   text-align: center; font-family: var(--font);
 }
 .freq-btn:hover { border-color: rgba(94, 205, 214, 0.35); }
-.freq-btn.selected { border-color: var(--card-border-active); background: var(--card-bg-active); }
+.freq-btn.selected { border-color: var(--aqua-deep); background: rgba(43, 168, 181, 0.25); box-shadow: 0 0 0 1px var(--aqua-deep); }
+.freq-btn.selected .freq-name { color: var(--ocean); }
 .freq-name { font-weight: 700; font-size: 0.82rem; color: var(--navy); display: block; }
 .freq-sub { font-size: 0.68rem; color: var(--text-muted); display: block; margin-top: 1px; }
 .freq-discount { font-size: 0.72rem; font-weight: 700; color: var(--aqua-deep); margin-top: 3px; display: block; }
@@ -2061,6 +2064,106 @@ body {
   .savings-counter-bar { flex-direction: column; gap: 12px; text-align: center; padding: 14px 16px; }
   .savings-counter-stats { justify-content: center; }
 }
+
+@media (max-width: 768px) {
+  /* Sub-hero mobile fix */
+  .sub-hero { padding: 110px 20px 50px; }
+  .sub-hero h1 { font-size: 1.8rem; margin-bottom: 12px; }
+  .sub-hero p { font-size: 0.92rem; padding: 0 8px; }
+
+  /* Toggle buttons */
+  .toggle-wrap { padding: 24px 16px 0; }
+  .mode-btn { padding: 12px 24px; font-size: 0.82rem; }
+
+  /* Calculator section */
+  .calculator-section { padding: 30px 16px 60px; }
+  .calc-config { padding: 24px 18px; }
+  .calc-config h2 { font-size: 1.1rem; margin-bottom: 18px; }
+
+  /* Addon banner */
+  .addon-banner { padding: 22px 16px; margin: 0 auto 20px; }
+  .addon-title { font-size: 1.15rem; }
+  .addon-desc { font-size: 0.82rem; }
+  .addon-choices { gap: 6px; }
+  .addon-chip { font-size: 0.72rem; padding: 6px 14px; }
+
+  /* Summary panel */
+  .calc-summary { padding: 24px 18px; border-radius: 20px; }
+
+  /* Size cards */
+  .size-card { padding: 20px 12px; min-height: 80px; }
+  .size-name { font-size: 1rem; }
+  .size-examples { font-size: 0.68rem; }
+
+  /* Frequency buttons */
+  .freq-options { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .freq-btn { padding: 10px 6px; }
+  .freq-name { font-size: 0.75rem; }
+  .freq-sub { font-size: 0.62rem; }
+  .freq-discount { font-size: 0.65rem; }
+
+  /* Package radios */
+  .pkg-radio { padding: 12px 14px; gap: 10px; }
+  .pkg-name { font-size: 0.85rem; }
+  .pkg-price { font-size: 0.72rem; }
+
+  /* How it works */
+  .how-steps { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .how-step { padding: 18px 12px; }
+  .step-title { font-size: 0.78rem; }
+  .step-desc { font-size: 0.7rem; }
+
+  /* FAQ */
+  .faq-section { padding: 48px 16px 60px; }
+  .faq-card { padding: 18px; }
+  .faq-q { font-size: 0.82rem; }
+  .faq-a { font-size: 0.72rem; }
+}
+
+@media (max-width: 480px) {
+  .sub-hero { padding: 100px 16px 40px; }
+  .sub-hero h1 { font-size: 1.5rem; }
+  .sub-hero p { font-size: 0.85rem; }
+
+  .mode-btn { padding: 10px 18px; font-size: 0.78rem; }
+  .mode-toggle { border-radius: 14px; }
+
+  .calculator-section { padding: 24px 12px 50px; }
+  .calc-config { padding: 20px 14px; border-radius: 18px; }
+  .calc-config h2 { font-size: 1rem; }
+
+  .addon-banner { padding: 18px 14px; border-radius: 16px; }
+  .addon-title { font-size: 1.05rem; }
+
+  .size-options { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .size-card { padding: 16px 10px; min-height: 70px; border-radius: 14px; }
+  .size-name { font-size: 0.9rem; }
+
+  .freq-options { gap: 5px; }
+  .freq-btn { padding: 8px 4px; border-radius: 10px; }
+  .freq-name { font-size: 0.7rem; }
+
+  .pkg-radio { padding: 10px 12px; border-radius: 12px; }
+
+  .calc-summary { padding: 20px 14px; border-radius: 18px; }
+  .summary-total { font-size: 1.7rem; }
+
+  .savings-counter-bar { padding: 12px 14px; border-radius: 14px; }
+
+  .how-steps { grid-template-columns: 1fr; gap: 10px; }
+}
+
+@media (max-width: 360px) {
+  .sub-hero { padding: 90px 12px 36px; }
+  .sub-hero h1 { font-size: 1.35rem; }
+  .sub-hero p { font-size: 0.8rem; }
+  .mode-btn { padding: 9px 14px; font-size: 0.74rem; }
+  .calculator-section { padding: 20px 10px 40px; }
+  .calc-config { padding: 16px 12px; }
+  .size-card { padding: 14px 8px; }
+  .freq-btn { padding: 7px 3px; }
+}
+
 @media (max-width: 520px) {
   .size-options { grid-template-columns: repeat(2, 1fr); }
 }
@@ -2127,10 +2230,10 @@ body {
 .modal-success.show { display: block; }
 .modal-success-icon {
   width: 56px; height: 56px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--green), #2ab86a);
-  color: var(--white); font-size: 1.5rem; font-weight: 900;
-  display: inline-flex; align-items: center; justify-content: center;
-  margin-bottom: 14px;
+  background: linear-gradient(135deg, #1a9c5a, #2ab86a);
+  color: #ffffff; font-size: 1.5rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
 }
 .modal-success-title {
   font-size: 1.1rem; font-weight: 900; color: var(--navy); margin-bottom: 6px;
@@ -2138,15 +2241,56 @@ body {
 .modal-success-text {
   font-size: 0.82rem; font-weight: 500; color: var(--text-light); line-height: 1.5;
 }
-fieldd-lead-form {
-  display: block;
+.modal-form {
   padding: 20px 28px 28px;
 }
+.modal-field {
+  margin-bottom: 14px;
+}
+.modal-field label {
+  display: block; font-size: 0.72rem; font-weight: 700;
+  color: var(--text-muted); margin-bottom: 4px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.modal-field input,
+.modal-field textarea {
+  width: 100%; padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid rgba(94, 205, 214, 0.2);
+  font-family: var(--font); font-size: 0.88rem;
+  color: var(--navy); background: var(--cream);
+  transition: border-color 0.2s;
+  outline: none;
+}
+.modal-field input:focus,
+.modal-field textarea:focus {
+  border-color: var(--aqua-deep);
+}
+.modal-field textarea { resize: vertical; min-height: 60px; }
+.modal-field-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.modal-submit {
+  width: 100%; padding: 14px;
+  font-family: var(--font); font-weight: 700; font-size: 0.92rem;
+  border-radius: 14px; border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: var(--navy);
+  box-shadow: 0 8px 24px rgba(240, 208, 0, 0.2);
+  transition: all 0.3s var(--ease);
+}
+.modal-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(240, 208, 0, 0.3);
+}
+.modal-submit:disabled {
+  opacity: 0.6; cursor: not-allowed; transform: none;
+  box-shadow: none;
+}
 @media (max-width: 520px) {
+  .modal-field-row { grid-template-columns: 1fr; }
   .modal-box { border-radius: 18px; }
 }
   </style>
-<script type="text/javascript" src="https://fieldd.me/lead-form"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -2767,7 +2911,41 @@ fieldd-lead-form {
         <div class="modal-sel-row"><span class="modal-sel-label">Monthly Cost</span><span class="modal-sel-value" id="modal-m-price" style="color:var(--green);"></span></div>
       </div>
 
-      <fieldd-lead-form code="NgfYlz"></fieldd-lead-form>
+      <form class="modal-form" id="form-membership" onsubmit="submitForm(event, 'membership')">
+        <div class="modal-field-row">
+          <div class="modal-field">
+            <label>First Name</label>
+            <input type="text" name="firstName" required placeholder="John">
+          </div>
+          <div class="modal-field">
+            <label>Last Name</label>
+            <input type="text" name="lastName" required placeholder="Smith">
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="john@email.com">
+        </div>
+        <div class="modal-field">
+          <label>Phone</label>
+          <input type="tel" name="phone" required placeholder="(412) 555-1234">
+        </div>
+        <div class="modal-field-row">
+          <div class="modal-field">
+            <label>Vehicle Year / Make / Model</label>
+            <input type="text" name="vehicle" required placeholder="2022 Honda Civic">
+          </div>
+          <div class="modal-field">
+            <label>Preferred Day</label>
+            <input type="text" name="preferredDay" placeholder="Saturdays, Weekdays, etc.">
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Anything else we should know?</label>
+          <textarea name="notes" placeholder="Special requests, second vehicle, etc."></textarea>
+        </div>
+        <button type="submit" class="modal-submit" id="btn-submit-membership">Submit My Membership Request</button>
+      </form>
     </div>
 
     <!-- Success view -->
@@ -2800,7 +2978,31 @@ fieldd-lead-form {
         <div class="modal-sel-row"><span class="modal-sel-label">Per Vehicle</span><span class="modal-sel-value" id="modal-f-price" style="color:var(--green);"></span></div>
       </div>
 
-      <fieldd-lead-form code="NgfYlz"></fieldd-lead-form>
+      <form class="modal-form" id="form-fleet" onsubmit="submitForm(event, 'fleet')">
+        <div class="modal-field-row">
+          <div class="modal-field">
+            <label>Your Name</label>
+            <input type="text" name="firstName" required placeholder="John Smith">
+          </div>
+          <div class="modal-field">
+            <label>Company Name</label>
+            <input type="text" name="company" required placeholder="Smith HVAC LLC">
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="john@company.com">
+        </div>
+        <div class="modal-field">
+          <label>Phone</label>
+          <input type="tel" name="phone" required placeholder="(412) 555-1234">
+        </div>
+        <div class="modal-field">
+          <label>Tell us about your fleet</label>
+          <textarea name="notes" placeholder="Vehicle types, locations, scheduling needs, etc."></textarea>
+        </div>
+        <button type="submit" class="modal-submit" id="btn-submit-fleet">Submit Fleet Quote Request</button>
+      </form>
     </div>
 
     <!-- Success view -->
@@ -3189,7 +3391,7 @@ function startLiveCounters() {
 // ═══════════════════════════════════════
 
 // *** PASTE YOUR GOOGLE APPS SCRIPT URL HERE ***
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUv5DpYd_ncD77Wq3OUs7hRlZdOYL53qHBikIKBSWcsEPePZ3ldhXz9UoqUxf2uMWWEg/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_IMsHRwBmlCt7i44KsYPfFZNbEukanHLp6-Vz3ACH3gQtU3u1Sj2ArLY5tNxe_o7jMQ/exec';
 
 function openMembershipModal() {
   const s = state.size;
@@ -3205,8 +3407,11 @@ function openMembershipModal() {
   document.getElementById('modal-m-freq').textContent = freqNames[f];
   document.getElementById('modal-m-price').textContent = '$' + priceArrays[f][s][p] + '/mo';
 
+  document.getElementById('form-membership').reset();
   document.getElementById('membership-form-view').style.display = '';
   document.getElementById('membership-success').classList.remove('show');
+  document.getElementById('btn-submit-membership').disabled = false;
+  document.getElementById('btn-submit-membership').textContent = 'Submit My Membership Request';
 
   document.getElementById('modal-membership').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -3227,8 +3432,11 @@ function openFleetModal() {
   document.getElementById('modal-f-freq').textContent = FLEET_FREQ_LABELS[fs.freq];
   document.getElementById('modal-f-price').textContent = '$' + price + '/visit';
 
+  document.getElementById('form-fleet').reset();
   document.getElementById('fleet-form-view').style.display = '';
   document.getElementById('fleet-success').classList.remove('show');
+  document.getElementById('btn-submit-fleet').disabled = false;
+  document.getElementById('btn-submit-fleet').textContent = 'Submit Fleet Quote Request';
 
   document.getElementById('modal-fleet').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -3281,16 +3489,16 @@ function submitForm(e, type) {
     return;
   }
 
+  // Show success immediately — don't wait for response
+  showSuccess(type);
+
+  // Send data in background
   fetch(GOOGLE_SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
-  }).then(() => {
-    showSuccess(type);
-  }).catch(() => {
-    showSuccess(type); // no-cors won't return a readable response, but data still posts
-  });
+  }).catch(() => {});
 }
 
 function showSuccess(type) {

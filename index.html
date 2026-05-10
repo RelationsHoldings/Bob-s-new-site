@@ -80,6 +80,7 @@
   }
 }
 </script>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -189,7 +190,7 @@ img { max-width: 100%; display: block; }
 
 .bubbles {
   position: absolute; inset: 0;
-  overflow: hidden; pointer-events: none; z-index: 0;
+  overflow: hidden; pointer-events: none; z-index: 2;
 }
 
 .bubbles span {
@@ -279,20 +280,31 @@ img { max-width: 100%; display: block; }
    ======================================== */
 
 .hero {
-  background: linear-gradient(170deg, #86f8fd, #b8fcfe);
+  background: #0c4a5e;
   padding: 120px 24px 80px;
   position: relative; overflow: hidden;
 }
+.hero-video {
+  position: absolute; top: 50%; left: 50%;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover; z-index: 0;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(170deg, rgba(12,74,94,0.45), rgba(134,248,253,0.25));
+}
 
 .hero-grid {
-  max-width: 1140px; margin: 0 auto; position: relative; z-index: 2;
+  max-width: 1140px; margin: 0 auto; position: relative; z-index: 3;
   display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px;
 }
 
 .hero-main {
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.7);
   border-radius: 24px; padding: 52px 40px;
   grid-row: span 2;
   display: flex; flex-direction: column; justify-content: center;
@@ -328,9 +340,9 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-stat {
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.7);
   border-radius: 24px; padding: 32px 24px;
   display: flex; flex-direction: column; justify-content: center;
   text-align: center;
@@ -347,7 +359,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-wave {
-  position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2;
+  position: absolute; bottom: -2px; left: 0; right: 0; z-index: 3;
 }
 .hero-wave svg { display: block; width: 100%; height: 80px; }
 
@@ -777,6 +789,167 @@ img { max-width: 100%; display: block; }
 .gallery-info p { font-size: 0.82rem; color: var(--text-muted); font-weight: 600; }
 
 /* ========================================
+   BEFORE & AFTER REVEAL
+   ======================================== */
+
+.reveal-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  max-width: 1100px; margin: 0 auto;
+}
+.reveal-card {
+  background: var(--white); border-radius: 22px; overflow: hidden;
+  box-shadow: var(--shadow-sm); border: 2px solid transparent;
+  transition: all 0.4s var(--ease);
+}
+.reveal-card:hover {
+  box-shadow: var(--shadow-md); border-color: rgba(94, 205, 214, 0.2);
+}
+.reveal-img-wrap {
+  position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden;
+  background: linear-gradient(135deg, #e8f4f5, #d4eaed);
+}
+.reveal-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block; position: absolute; inset: 0;
+}
+.reveal-img-before, .reveal-img-after {
+  transition: opacity 0.6s var(--ease);
+}
+.reveal-img-after {
+  opacity: 0; z-index: 1;
+}
+.reveal-card.revealed .reveal-img-after { opacity: 1; }
+.reveal-card.revealed .reveal-img-before { opacity: 0; }
+
+/* Bubble wash animation overlay */
+.reveal-wash {
+  position: absolute; inset: 0; z-index: 10;
+  background: linear-gradient(180deg, rgba(134,248,253,0.85), rgba(94,205,214,0.9));
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+}
+.reveal-wash.playing {
+  animation: washIn 2.2s var(--ease) forwards;
+}
+@keyframes washIn {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; pointer-events: none; }
+}
+.reveal-wash-logo {
+  width: 90px; height: 90px; object-fit: contain;
+  opacity: 0; transform: scale(0.5);
+  filter: drop-shadow(0 4px 20px rgba(12, 74, 94, 0.3));
+}
+.reveal-wash.playing .reveal-wash-logo {
+  animation: logoReveal 2.2s var(--ease-out) forwards;
+}
+@keyframes logoReveal {
+  0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+  20% { opacity: 1; transform: scale(1.1) rotate(0deg); }
+  60% { opacity: 1; transform: scale(1) rotate(0deg); }
+  85% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 0; }
+}
+
+/* Animated bubbles inside the wash overlay */
+.wash-bubble {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  opacity: 0;
+}
+.reveal-wash.playing .wash-bubble {
+  animation: bubbleFloat 2s var(--ease) forwards;
+}
+.wb1 { width: 30px; height: 30px; left: 10%; bottom: -30px; animation-delay: 0s !important; }
+.wb2 { width: 20px; height: 20px; left: 25%; bottom: -20px; animation-delay: 0.15s !important; }
+.wb3 { width: 40px; height: 40px; left: 45%; bottom: -40px; animation-delay: 0.05s !important; }
+.wb4 { width: 22px; height: 22px; left: 65%; bottom: -22px; animation-delay: 0.2s !important; }
+.wb5 { width: 35px; height: 35px; left: 80%; bottom: -35px; animation-delay: 0.1s !important; }
+.wb6 { width: 18px; height: 18px; left: 15%; bottom: -18px; animation-delay: 0.25s !important; }
+.wb7 { width: 28px; height: 28px; left: 55%; bottom: -28px; animation-delay: 0.08s !important; }
+.wb8 { width: 24px; height: 24px; left: 35%; bottom: -24px; animation-delay: 0.18s !important; }
+.wb9 { width: 16px; height: 16px; left: 75%; bottom: -16px; animation-delay: 0.3s !important; }
+.wb10 { width: 32px; height: 32px; left: 90%; bottom: -32px; animation-delay: 0.12s !important; }
+
+@keyframes bubbleFloat {
+  0% { opacity: 0; transform: translateY(0) scale(0.3); }
+  15% { opacity: 0.8; transform: translateY(-40px) scale(1); }
+  50% { opacity: 0.6; transform: translateY(-140px) scale(0.9); }
+  80% { opacity: 0.3; transform: translateY(-220px) scale(0.7); }
+  100% { opacity: 0; transform: translateY(-300px) scale(0.4); }
+}
+
+/* Card bottom info */
+.reveal-info {
+  padding: 18px 22px; text-align: center;
+}
+.reveal-label {
+  font-size: 0.82rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 10px;
+}
+.reveal-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 24px; border-radius: 12px;
+  border: 2px solid var(--aqua-deep);
+  background: rgba(43, 168, 181, 0.08);
+  color: var(--aqua-deep);
+  font-family: var(--font); font-weight: 700; font-size: 0.82rem;
+  cursor: pointer; transition: all 0.3s var(--ease);
+}
+.reveal-btn:hover {
+  background: var(--aqua-deep); color: var(--white);
+  transform: translateY(-2px); box-shadow: 0 4px 16px rgba(43, 168, 181, 0.3);
+}
+.reveal-btn-icon {
+  display: inline-block; transition: transform 0.3s;
+}
+.reveal-btn:hover .reveal-btn-icon { transform: scale(1.2); }
+
+.reveal-card.revealed .reveal-btn {
+  background: var(--gold); border-color: var(--gold);
+  color: var(--navy);
+}
+.reveal-card.revealed .reveal-btn:hover {
+  background: var(--gold-deep); border-color: var(--gold-deep);
+  box-shadow: 0 4px 16px rgba(240, 208, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reveal-grid { grid-template-columns: 1fr 1fr; max-width: 700px; }
+}
+@media (max-width: 580px) {
+  .reveal-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .reveal-card { border-radius: 18px; }
+  .reveal-info { padding: 14px 18px; }
+}
+
+/* Instagram CTA */
+.ig-cta {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  margin: 40px auto 0; padding: 18px 32px;
+  max-width: 600px; border-radius: 16px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: var(--white); text-decoration: none;
+  font-family: var(--font); font-weight: 700; font-size: 0.95rem;
+  transition: all 0.3s var(--ease);
+  box-shadow: 0 4px 20px rgba(131, 58, 180, 0.3);
+}
+.ig-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(131, 58, 180, 0.4);
+}
+.ig-icon { width: 26px; height: 26px; flex-shrink: 0; }
+.ig-arrow { font-size: 1.2rem; transition: transform 0.3s; }
+.ig-cta:hover .ig-arrow { transform: translateX(4px); }
+@media (max-width: 580px) {
+  .ig-cta { padding: 16px 24px; font-size: 0.85rem; gap: 10px; }
+  .ig-icon { width: 22px; height: 22px; }
+}
+
+/* ========================================
    REVIEWS
    ======================================== */
 
@@ -894,7 +1067,7 @@ a.footer-link:hover { color: var(--white); }
   opacity: 0; transform: translateY(28px);
   transition: all 0.7s var(--ease-out);
 }
-[data-reveal].revealed { opacity: 1; transform: translateY(0); }
+[data-reveal].visible { opacity: 1; transform: translateY(0); }
 
 /* ========================================
    RESPONSIVE
@@ -1036,6 +1209,9 @@ a.footer-link:hover { color: var(--white); }
 
   <!-- HERO — MAGAZINE GRID -->
   <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero-bg.mp4" type="video/mp4">
+    </video>
     <div class="bubbles">
       <span class="b1"></span><span class="b2"></span><span class="b3"></span>
       <span class="b4"></span><span class="b5"></span><span class="b6"></span>
@@ -1063,6 +1239,88 @@ a.footer-link:hover { color: var(--white); }
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="var(--white)">
         <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"/>
       </svg>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER REVEAL -->
+  <section class="section section-white" id="results">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Real Results</span>
+        <h2 class="section-title">See the <span class="gold">Transformation</span></h2>
+        <p class="section-sub">Don't just take our word for it. See what Bob's Detailing can do.</p>
+      </div>
+      <div class="reveal-grid">
+
+        <div class="reveal-card" data-reveal>
+          <div class="reveal-img-wrap">
+            <img src="before-1.jpg" alt="Before detailing" class="reveal-img-before">
+            <img src="after-1.jpg" alt="After detailing" class="reveal-img-after">
+            <div class="reveal-wash">
+              <span class="wash-bubble wb1"></span><span class="wash-bubble wb2"></span>
+              <span class="wash-bubble wb3"></span><span class="wash-bubble wb4"></span>
+              <span class="wash-bubble wb5"></span><span class="wash-bubble wb6"></span>
+              <span class="wash-bubble wb7"></span><span class="wash-bubble wb8"></span>
+              <span class="wash-bubble wb9"></span><span class="wash-bubble wb10"></span>
+              <img src="logo.png" alt="Bob's Detailing" class="reveal-wash-logo">
+            </div>
+          </div>
+          <div class="reveal-info">
+
+            <button class="reveal-btn" onclick="playReveal(this)">
+              <span class="reveal-btn-icon">&#10024;</span> Reveal the Detail
+            </button>
+          </div>
+        </div>
+
+        <div class="reveal-card" data-reveal>
+          <div class="reveal-img-wrap">
+            <img src="before-2.jpg" alt="Before detailing" class="reveal-img-before">
+            <img src="after-2.jpg" alt="After detailing" class="reveal-img-after">
+            <div class="reveal-wash">
+              <span class="wash-bubble wb1"></span><span class="wash-bubble wb2"></span>
+              <span class="wash-bubble wb3"></span><span class="wash-bubble wb4"></span>
+              <span class="wash-bubble wb5"></span><span class="wash-bubble wb6"></span>
+              <span class="wash-bubble wb7"></span><span class="wash-bubble wb8"></span>
+              <span class="wash-bubble wb9"></span><span class="wash-bubble wb10"></span>
+              <img src="logo.png" alt="Bob's Detailing" class="reveal-wash-logo">
+            </div>
+          </div>
+          <div class="reveal-info">
+
+            <button class="reveal-btn" onclick="playReveal(this)">
+              <span class="reveal-btn-icon">&#10024;</span> Reveal the Detail
+            </button>
+          </div>
+        </div>
+
+        <div class="reveal-card" data-reveal>
+          <div class="reveal-img-wrap">
+            <img src="before-3.jpg" alt="Before detailing" class="reveal-img-before">
+            <img src="after-3.jpg" alt="After detailing" class="reveal-img-after">
+            <div class="reveal-wash">
+              <span class="wash-bubble wb1"></span><span class="wash-bubble wb2"></span>
+              <span class="wash-bubble wb3"></span><span class="wash-bubble wb4"></span>
+              <span class="wash-bubble wb5"></span><span class="wash-bubble wb6"></span>
+              <span class="wash-bubble wb7"></span><span class="wash-bubble wb8"></span>
+              <span class="wash-bubble wb9"></span><span class="wash-bubble wb10"></span>
+              <img src="logo.png" alt="Bob's Detailing" class="reveal-wash-logo">
+            </div>
+          </div>
+          <div class="reveal-info">
+
+            <button class="reveal-btn" onclick="playReveal(this)">
+              <span class="reveal-btn-icon">&#10024;</span> Reveal the Detail
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <a href="https://www.instagram.com/bobsdetailingpgh?igsh=YTdqd2JyY2R3Znpp" target="_blank" rel="noopener" class="ig-cta" data-reveal>
+        <svg class="ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        <span class="ig-text">Want to see more of our work? Follow us on Instagram</span>
+        <span class="ig-arrow">&#8594;</span>
+      </a>
     </div>
   </section>
 
@@ -1124,33 +1382,33 @@ a.footer-link:hover { color: var(--white); }
   <section class="section section-aqua" id="reviews">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Testimonials</span>
+        <span class="section-tag">Google Reviews</span>
         <h2 class="section-title">What Clients <span class="gold">Say</span></h2>
-        <p class="section-sub">Real results. Real people. 5-star service every time.</p>
+        <p class="section-sub">Real reviews from real customers on Google. 5-star service every time.</p>
       </div>
       <div class="reviews-grid">
         <div class="review-card" data-reveal>
           <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"Bob came to my house and made my SUV look brand new. The interior was spotless and the paint had a mirror finish. Best detailing service I've ever used, hands down."</p>
-          <div class="review-author">
-            <div class="author-avatar">M</div>
-            <div><p class="author-name">Marcus T.</p><p class="author-location">Shadyside, Pittsburgh</p></div>
-          </div>
-        </div>
-        <div class="review-card" data-reveal>
-          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"I got the Signature package for my BMW and it looked better than when I drove it off the lot. Bob is thorough, professional, and actually cares about his work. Already booked my next one."</p>
+          <p class="review-text">"Bob did an incredible job on 4 cars in one day!! They all look brand new!! His mobile van makes it so easy. We didn't have access to a hose in the winter but it didn't matter with the tank on his van. Thanks for taking such great care of us!!"</p>
           <div class="review-author">
             <div class="author-avatar">J</div>
-            <div><p class="author-name">Jessica R.</p><p class="author-location">Mt. Lebanon, Pittsburgh</p></div>
+            <div><p class="author-name">John Henne</p><p class="author-location">Google Review</p></div>
           </div>
         </div>
         <div class="review-card" data-reveal>
           <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"Had dog hair everywhere and a mystery smell I couldn't get rid of. Bob handled it all. Car smells amazing and looks incredible. Worth every penny. Will be a regular customer."</p>
+          <p class="review-text">"My car looks brand new and not a detail was missed! Bob is fantastic to work with and the best part is that he is mobile and can come straight to you. I had him take care of my car while at work, and it was incredibly convenient. HIGHLY recommend!!!"</p>
           <div class="review-author">
-            <div class="author-avatar">D</div>
-            <div><p class="author-name">David K.</p><p class="author-location">Squirrel Hill, Pittsburgh</p></div>
+            <div class="author-avatar">L</div>
+            <div><p class="author-name">Lauren Breit</p><p class="author-location">Google Review</p></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-text">"Absolutely outstanding service! I couldn't be happier with the results. Bob arrived on time, fully equipped, and handled everything with care and professionalism. My car looks brand new&#8212;inside and out."</p>
+          <div class="review-author">
+            <div class="author-avatar">M</div>
+            <div><p class="author-name">Michelle Kirkpatrick</p><p class="author-location">Google Review</p></div>
           </div>
         </div>
       </div>
@@ -1226,7 +1484,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('revealed'), i * 80);
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
       revealObserver.unobserve(entry.target);
     }
   });
@@ -1313,6 +1571,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+// Before & After Reveal Animation
+function playReveal(btn) {
+  const card = btn.closest('.reveal-card');
+  if (card.classList.contains('animating')) return;
+
+  if (card.classList.contains('revealed')) {
+    // Reset back to before
+    card.classList.remove('revealed');
+    btn.innerHTML = '<span class="reveal-btn-icon">&#10024;</span> Reveal the Detail';
+    return;
+  }
+
+  card.classList.add('animating');
+  const wash = card.querySelector('.reveal-wash');
+  wash.classList.remove('playing');
+
+  // Force reflow to restart animation
+  void wash.offsetWidth;
+  wash.classList.add('playing');
+
+  // Swap the image midway through the wash while it's still covering
+  setTimeout(function() {
+    card.classList.add('revealed');
+  }, 1100);
+
+  // Clean up after animation finishes
+  setTimeout(function() {
+    card.classList.remove('animating');
+    wash.classList.remove('playing');
+    btn.innerHTML = '<span class="reveal-btn-icon">&#8634;</span> See the Before';
+  }, 2200);
+}
   </script>
 </body>
 </html>
