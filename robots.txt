@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bobsdetailingpgh.com/sitemap.xml

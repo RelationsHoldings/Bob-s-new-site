@@ -5,7 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing</title>
   <meta name="description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
-  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="canonical" href="https://www.bobsdetailingpgh.com/packages.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.bobsdetailingpgh.com/packages.html">
+  <meta property="og:title" content="Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing">
+  <meta property="og:description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
+  <meta property="og:image" content="https://www.bobsdetailingpgh.com/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing">
+  <meta name="twitter:description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
+  <meta name="twitter:image" content="https://www.bobsdetailingpgh.com/logo.png">
+
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPF4EF1DVM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPF4EF1DVM');
+</script>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "Bob's Detailing",
+  "image": "https://www.bobsdetailingpgh.com/logo.png",
+  "url": "https://www.bobsdetailingpgh.com",
+  "telephone": "+14129258970",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cranberry Township",
+    "addressRegion": "PA",
+    "postalCode": "16066",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.6847,
+    "longitude": -80.1072
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Pittsburgh"},
+    {"@type": "City", "name": "Cranberry Township"},
+    {"@type": "City", "name": "Wexford"},
+    {"@type": "City", "name": "Sewickley"},
+    {"@type": "City", "name": "Mt. Lebanon"},
+    {"@type": "City", "name": "Mars"},
+    {"@type": "City", "name": "Robinson Township"},
+    {"@type": "City", "name": "Bethel Park"},
+    {"@type": "City", "name": "Allison Park"},
+    {"@type": "City", "name": "Coraopolis"}
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "sameAs": [
+    "https://www.instagram.com/bobsdetailingpgh/",
+    "https://www.facebook.com/p/Bobs-Detailing-100057306226157/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "8"
+  }
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -143,12 +217,11 @@ img { max-width: 100%; display: block; }
 .btn-glass {
   background: rgba(255, 255, 255, 0.5);
   color: var(--navy);
-  border: 2px solid var(--aqua-deep);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px rgba(12, 74, 94, 0.06);
 }
 .btn-glass:hover {
   background: rgba(255, 255, 255, 0.8);
-  border-color: var(--ocean);
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(12, 74, 94, 0.1);
 }
@@ -686,7 +759,7 @@ a.footer-link:hover { color: var(--white); }
         <a href="subscriptions.html">Subscriptions</a>
         <a href="index.html#reviews">Reviews</a>
       </div>
-      <a href="https://bobsdetailing1.fieldd.co" class="btn btn-gold nav-cta">Book Now</a>
+      <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -699,7 +772,7 @@ a.footer-link:hover { color: var(--white); }
     <a href="packages.html" class="mobile-link">Packages</a>
     <a href="subscriptions.html" class="mobile-link">Subscriptions</a>
     <a href="index.html#reviews" class="mobile-link">Reviews</a>
-    <a href="https://bobsdetailing1.fieldd.co" class="btn btn-gold mobile-cta">Book Now</a>
+    <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
   </div>
 
   <!-- PAGE HEADER -->
@@ -728,7 +801,7 @@ a.footer-link:hover { color: var(--white); }
           <li>Complete vacuum with crevice extraction and compressed air blowout to reach every seam, vent, and pockets</li>
           <li>All surfaces wiped and dressed with UV protectant, interior glass cleaned streak-free</li>
         </ul>
-        <a href="https://bobsdetailing1.fieldd.co" class="btn btn-glass">Book This Package</a>
+        <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="btn btn-glass" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book This Package</a>
       </div>
 
       <!-- BOB'S SIGNATURE -->
@@ -747,7 +820,7 @@ a.footer-link:hover { color: var(--white); }
           <li>Fabric seats, carpets, and mats shampooed and hot-water extracted to pull out deep-set stains and odors</li>
           <li>All leather, vinyl, and plastic surfaces detailed and conditioned, full vacuum with crevice extraction, and interior glass cleaned streak-free</li>
         </ul>
-        <a href="https://bobsdetailing1.fieldd.co" class="btn btn-gold">Book This Package</a>
+        <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="btn btn-gold" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book This Package</a>
       </div>
 
       <!-- SHOWROOM SHINE -->
@@ -765,7 +838,7 @@ a.footer-link:hover { color: var(--white); }
           <li>Every leather, vinyl, and plastic surface sealed with a dedicated UV and stain protectant creating an invisible barrier against sun fading, spills, and daily wear</li>
           <li>Deep steam extraction and sanitization of all fabric surfaces to eliminate embedded allergens, bacteria, and odors at the fiber level</li>
         </ul>
-        <a href="https://bobsdetailing1.fieldd.co" class="btn btn-glass">Book This Package</a>
+        <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="btn btn-glass" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book This Package</a>
       </div>
 
     </div>
@@ -789,13 +862,13 @@ a.footer-link:hover { color: var(--white); }
           <h5 class="footer-heading">Quick Links</h5>
           <a href="index.html#area" class="footer-link">Service Area</a>
           <a href="index.html#reviews" class="footer-link">Reviews</a>
-          <a href="https://bobsdetailing1.fieldd.co" class="footer-link">Book Now</a>
+          <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="footer-link">Book Now</a>
         </div>
         <div>
           <h5 class="footer-heading">Contact</h5>
           <div class="footer-contact-item">
             <span class="footer-contact-label">Phone</span>
-            <a href="tel:4129258970" class="footer-link">(412) 925-8970</a>
+            <a href="tel:4129258970" class="footer-link" onclick="gtag('event', 'phone_click', {'page': 'packages'});">(412) 925-8970</a>
           </div>
           <div class="footer-contact-item">
             <span class="footer-contact-label">Email</span>
