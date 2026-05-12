@@ -612,7 +612,7 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-grid {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1.1fr;
   gap: 40px; padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;
 }
@@ -663,7 +663,7 @@ a.footer-link:hover { color: var(--white); }
 
 @media (max-width: 1024px) {
   .pkg-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -739,7 +739,307 @@ a.footer-link:hover { color: var(--white); }
   .van-img { height: 55px; }
   .van-road { height: 80px; }
 }
-  </style>
+  
+
+/* ============================================================
+   DARK THEME OVERRIDE — Black & Gold
+   Inserted after all existing rules so cascade favors these.
+   ============================================================ */
+
+:root {
+  --sky: #000000;
+  --sky-light: #0a0a0a;
+  --sky-pale: #000000;
+  --aqua: #f0d000;
+  --aqua-deep: #d4a800;
+  --aqua-dark: #b8941d;
+  --ocean: #d4a800;
+  --navy: #0a0a0a;
+  --gold: #f0d000;
+  --gold-light: #ffe040;
+  --gold-deep: #d4a800;
+  --orange: #e09000;
+  --white: #1a1a1a;
+  --cream: #0a0a0a;
+  --text: #f5f5f5;
+  --text-light: #c5c5c5;
+  --text-muted: #999999;
+  --bubble: rgba(240, 208, 0, 0.2);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 4px 20px rgba(240, 208, 0, 0.4);
+}
+
+body {
+  background: #000000 !important;
+  color: #f5f5f5 !important;
+}
+
+/* HEADINGS — were dark navy, now white with gold accents */
+.hero-title, .section-title, .cta-title, .page-header h1,
+.pkg-name, .pkg-price-amount, .step-title, .trust-title, .faq-q,
+.author-name, .area-info h3, .pricing-ref h3,
+.contact-value, .contact-value a {
+  color: #f5f5f5 !important;
+}
+
+.section-title .gold, .hero-title em, .cta-title .gold,
+.page-header h1 .gold, .section-title .aqua, .page-header h1 .aqua {
+  color: #f0d000 !important;
+  -webkit-text-fill-color: #f0d000 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+.pkg-price-amount, .pricing-ref-item .price, .hero-stat .num {
+  color: #f0d000 !important;
+}
+
+/* NAVBAR — black with gold accent */
+.navbar {
+  background: rgba(0, 0, 0, 0.92) !important;
+  border-bottom: 1px solid rgba(240, 208, 0, 0.25) !important;
+}
+
+.nav-links > a, .nav-dropdown > .nav-dropdown-trigger,
+.nav-dropdown-trigger {
+  color: #f5f5f5 !important;
+}
+
+.nav-links > a:hover, .nav-links a.active,
+.nav-dropdown:hover > .nav-dropdown-trigger {
+  color: #f0d000 !important;
+}
+
+.nav-toggle span {
+  background: #f0d000 !important;
+}
+
+.nav-dropdown-menu {
+  background: rgba(20, 20, 20, 0.98) !important;
+  border: 1px solid rgba(240, 208, 0, 0.25) !important;
+}
+
+.nav-dropdown-menu a {
+  color: #f5f5f5 !important;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(240, 208, 0, 0.1) !important;
+  color: #f0d000 !important;
+}
+
+/* MOBILE MENU — dark */
+.mobile-menu {
+  background: rgba(0, 0, 0, 0.98) !important;
+  border-bottom: 1px solid rgba(240, 208, 0, 0.25) !important;
+}
+
+.mobile-link {
+  color: #f5f5f5 !important;
+  border-bottom: 1px solid rgba(240, 208, 0, 0.15) !important;
+}
+
+.mobile-link.indent { color: #c5c5c5 !important; }
+.mobile-section-label { color: #f0d000 !important; }
+
+/* HERO — was light blue gradient, now black */
+.hero {
+  background: linear-gradient(170deg, #000000, #0a0a0a) !important;
+}
+
+.hero-main, .hero-stat {
+  background: rgba(20, 20, 20, 0.7) !important;
+  border: 1px solid rgba(240, 208, 0, 0.2) !important;
+}
+
+.hero-wave svg path { fill: #0a0a0a !important; }
+
+/* SECTIONS */
+.section-white { background: #0a0a0a !important; }
+.section-aqua {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%) !important;
+}
+
+/* CARDS — were white, now dark with gold border */
+.pkg-card, .review-card, .gallery-card, .trust-card, .step-card,
+.faq-item, .included-item, .pricing-ref {
+  background: #1a1a1a !important;
+  border: 1px solid rgba(240, 208, 0, 0.12) !important;
+}
+
+.pkg-card.featured {
+  background: linear-gradient(180deg, rgba(240, 208, 0, 0.08) 0%, #1a1a1a 40%) !important;
+  border-color: #f0d000 !important;
+}
+
+.pkg-card:hover, .review-card:hover, .trust-card:hover, .gallery-card:hover {
+  border-color: rgba(240, 208, 0, 0.4) !important;
+}
+
+/* AREA TAGS */
+.area-tag {
+  background: #1a1a1a !important;
+  border: 2px solid rgba(240, 208, 0, 0.2) !important;
+  color: #ffe040 !important;
+}
+.area-tag:hover {
+  border-color: #f0d000 !important;
+  background: rgba(240, 208, 0, 0.1) !important;
+}
+
+/* GLASS BUTTONS — adjust for dark bg */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #f5f5f5 !important;
+  border: 1px solid rgba(240, 208, 0, 0.3) !important;
+}
+.btn-glass:hover {
+  background: rgba(240, 208, 0, 0.15) !important;
+  color: #f0d000 !important;
+  border-color: #f0d000 !important;
+}
+
+/* CTA — dark with gold framing */
+.cta-section {
+  background: linear-gradient(170deg, #0a0a0a 0%, #000000 100%) !important;
+  border-top: 1px solid rgba(240, 208, 0, 0.3);
+  border-bottom: 1px solid rgba(240, 208, 0, 0.3);
+}
+.cta-title, .cta-sub { color: #f5f5f5 !important; }
+.cta-sub { color: rgba(245, 245, 245, 0.85) !important; }
+
+/* FOOTER — already dark, keep but gold accents */
+.footer {
+  background: #000000 !important;
+  border-top: 2px solid rgba(240, 208, 0, 0.3);
+}
+.footer-heading { color: #f0d000 !important; }
+
+/* BODY TEXT ON DARK CARDS */
+.pkg-desc, .review-text, .author-location, .trust-desc, .step-desc,
+.faq-a, .section-sub, .hero-sub, .page-header p,
+.area-info > p, .pricing-ref p, .gallery-info p,
+.contact-label {
+  color: #c5c5c5 !important;
+}
+
+.pkg-features li, .included-text {
+  color: #f5f5f5 !important;
+}
+
+/* CHECKMARKS & STEP NUMBERS — gold */
+.pkg-features li::before {
+  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
+  opacity: 0.9 !important;
+}
+.pkg-features li::after {
+  border-left-color: #000 !important;
+  border-bottom-color: #000 !important;
+}
+.included-check {
+  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
+  color: #000 !important;
+}
+.step-num {
+  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
+  color: #000 !important;
+}
+.trust-icon {
+  background: linear-gradient(135deg, #ffe040, #f0d000) !important;
+}
+
+/* CONTACT ICONS */
+.contact-icon {
+  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
+}
+.contact-icon svg { stroke: #000 !important; }
+.contact-value a:hover { color: #f0d000 !important; }
+
+/* SECTION TAGS / PILLS */
+.section-tag,
+.page-header .section-tag {
+  background: rgba(240, 208, 0, 0.12) !important;
+  color: #ffe040 !important;
+}
+
+/* DIVIDERS */
+.pkg-divider {
+  background: linear-gradient(90deg, rgba(240, 208, 0, 0.5), transparent) !important;
+}
+
+/* GALLERY (before/after) */
+.gallery-before {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a) !important;
+  color: #c5c5c5 !important;
+}
+.gallery-after {
+  background: linear-gradient(135deg, #0a0a0a, #000000) !important;
+  color: #f0d000 !important;
+}
+.gallery-label-before {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #c5c5c5 !important;
+}
+.gallery-label-after {
+  background: rgba(240, 208, 0, 0.2) !important;
+  color: #f0d000 !important;
+}
+.gallery-info h4 { color: #f5f5f5 !important; }
+
+/* AREA MAP */
+.area-map-wrap {
+  border: 3px solid rgba(240, 208, 0, 0.3) !important;
+}
+
+/* FORMS */
+input, select, textarea {
+  background: #1a1a1a !important;
+  color: #f5f5f5 !important;
+  border-color: rgba(240, 208, 0, 0.25) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #f0d000 !important;
+  outline: none !important;
+}
+
+/* PRICING REF (link to packages) */
+.pricing-ref {
+  background: linear-gradient(135deg, rgba(240, 208, 0, 0.05), rgba(20, 20, 20, 1)) !important;
+  border: 2px solid rgba(240, 208, 0, 0.25) !important;
+}
+
+/* BUBBLE OVERLAYS — for animations on index/packages/subs */
+.bubble-reveal-overlay {
+  background: linear-gradient(170deg, #000000, #0a0a0a) !important;
+}
+.van-overlay {
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* AUTHOR AVATAR */
+.author-avatar {
+  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
+  color: #000 !important;
+}
+
+/* PROMISE BOX (about page) */
+.promise-box {
+  background: #1a1a1a !important;
+  border: 3px solid rgba(240, 208, 0, 0.3) !important;
+}
+
+/* FAQ */
+.faq-q::after { color: #f0d000 !important; }
+.faq-q { color: #f5f5f5 !important; }
+.faq-a { color: #c5c5c5 !important; }
+
+/* MISC text fallbacks */
+.area-info h3 { color: #f5f5f5 !important; }
+.section-header { color: #f5f5f5 !important; }
+</style>
 </head>
 <body>
 
@@ -865,6 +1165,25 @@ a.footer-link:hover { color: var(--white); }
           <a href="index.html#area" class="footer-link">Service Area</a>
           <a href="index.html#reviews" class="footer-link">Reviews</a>
           <a href="https://bobsdetailing1.fieldd.co?utm_source=website&utm_medium=cta&utm_campaign=packages" class="footer-link">Book Now</a>
+        </div>
+        <div>
+          <h5 class="footer-heading">Services</h5>
+          <a href="ceramic-coating.html" class="footer-link">Ceramic Coating</a>
+          <a href="paint-correction.html" class="footer-link">Paint Correction</a>
+          <a href="interior-detailing.html" class="footer-link">Interior Detailing</a>
+          <a href="pet-hair-removal.html" class="footer-link">Pet Hair Removal</a>
+          <a href="headlight-restoration.html" class="footer-link">Headlight Restoration</a>
+          <a href="maintenance-detail.html" class="footer-link">Maintenance Detail</a>
+        </div>
+        <div>
+          <h5 class="footer-heading">Service Areas</h5>
+          <a href="pittsburgh.html" class="footer-link">Pittsburgh</a>
+          <a href="cranberry-township.html" class="footer-link">Cranberry Township</a>
+          <a href="wexford.html" class="footer-link">Wexford</a>
+          <a href="sewickley.html" class="footer-link">Sewickley</a>
+          <a href="mt-lebanon.html" class="footer-link">Mt. Lebanon</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="contact.html" class="footer-link">Contact</a>
         </div>
         <div>
           <h5 class="footer-heading">Contact</h5>
