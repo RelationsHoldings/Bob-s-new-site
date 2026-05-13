@@ -4,7 +4,7 @@
 
 ## About
 
-Bob's Detailing is a premier mobile car detailing service based in Cranberry Township, PA, serving the greater Pittsburgh metro area. We come directly to our customers' homes or offices with a fully self-contained mobile detailing rig — no need for the customer to provide water or power. Founded in 2024 by Bob, who has over a decade of detailing experience. Phone: (412) 925-8970. Email: bookings@bobsdetailingpgh.com. Hours: 8am to 6pm, Monday through Sunday.
+Bob's Detailing is a premier mobile car detailing service based in Cranberry Township, PA, serving the greater Pittsburgh metro area. We come directly to our customers' homes or offices with a fully self-contained mobile detailing rig. No need for the customer to provide water or power. Founded in 2024 by Bob, who has over a decade of detailing experience. Phone: (412) 925-8970. Email: bookings@bobsdetailingpgh.com. Hours: 8am to 6pm, Monday through Sunday.
 
 ## Services
 
@@ -17,9 +17,9 @@ Bob's Detailing is a premier mobile car detailing service based in Cranberry Tow
 
 ## Packages
 
-- Daily Driver: Starting at $175 — full hand wash, quick protectant, complete vacuum, and interior reset.
-- Bob's Signature (Most Popular): Starting at $275 — deep reset with paint decontamination, hand wax, full shampoo and extraction.
-- Showroom Shine: Starting at $350 — premium synthetic sealant, hydrophobic protection, leather UV seal, and steam sanitization.
+- Daily Driver: Starting at $175. Full hand wash, quick protectant, complete vacuum, and interior reset.
+- Bob's Signature (Most Popular): Starting at $275. Deep reset with paint decontamination, hand wax, full shampoo and extraction.
+- Showroom Shine: Starting at $350. Premium synthetic sealant, hydrophobic protection, leather UV seal, and steam sanitization.
 
 ## Subscriptions
 
@@ -48,10 +48,10 @@ Bob's Detailing is a premier mobile car detailing service based in Cranberry Tow
 
 ## Differentiators
 
-- Fully self-contained mobile setup — no water or electric needed from the customer.
+- Fully self-contained mobile setup. No water or electric needed from the customer.
 - 10+ years of detailing experience.
 - 5.0 star rated.
-- 100% satisfaction guarantee — we make it right if you're not happy.
+- 100% satisfaction guarantee. We make it right if you're not happy.
 - Premium tools and materials: pressure washer with foam cannon, hot-water extractor, multi-stage polishing equipment, ceramic coating supplies.
 - Comes to home, office, apartment, or any location with reasonable access.
 
@@ -64,7 +64,7 @@ Bob's Detailing is a premier mobile car detailing service based in Cranberry Tow
 
 ## Additional Service Areas
 
-- [Shadyside](https://www.bobsdetailingpgh.com/shadyside.html): Walnut Street, Aiken, Howe — mobile detailing in Pittsburgh's tight residential streets.
+- [Shadyside](https://www.bobsdetailingpgh.com/shadyside.html): Walnut Street, Aiken, Howe. Mobile detailing in Pittsburgh's tight residential streets.
 - [Squirrel Hill](https://www.bobsdetailingpgh.com/squirrel-hill.html): Squirrel Hill North and South coverage.
 - [Lawrenceville](https://www.bobsdetailingpgh.com/lawrenceville.html): Lower, Central, and Upper Lawrenceville.
 - [Strip District](https://www.bobsdetailingpgh.com/strip-district.html): Mobile detailing for Strip District lofts, condos, and businesses.
