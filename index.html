@@ -1912,9 +1912,7 @@ input:focus, select:focus, textarea:focus {
           </div>
         </div>
         <div class="area-map-wrap">
-          <a href="https://www.google.com/maps/search/?api=1&query=Cranberry+Township+PA" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;text-decoration:none;">
-            <img src="service-area.png" alt="Bob's Detailing service area map covering Pittsburgh, Cranberry Township, Wexford, Sewickley, Mt. Lebanon and surrounding 30-mile radius" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97185.07!2d-80.0!3d40.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bob's Detailing service area in the Pittsburgh, PA metropolitan area"></iframe>
         </div>
       </div>
     </div>
@@ -2119,56 +2117,9 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
   window.addEventListener('touchend', () => isDragging = false);
 });
 
-// BUBBLE TRANSITION TO PACKAGES PAGE
-function bubbleTransition(href) {
-  const overlay = document.createElement('div');
-  overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;pointer-events:none;overflow:hidden;';
-  document.body.appendChild(overlay);
+// (bubble transition animation removed)
 
-  const colors = ['', '', 'gold', 'aqua', 'aqua', ''];
-  const totalBubbles = 120;
-  const waves = 6;
-
-  for (let wave = 0; wave < waves; wave++) {
-    const bubblesInWave = Math.floor(totalBubbles / waves);
-    for (let i = 0; i < bubblesInWave; i++) {
-      const bubble = document.createElement('div');
-      bubble.className = 'foam-bubble ' + colors[Math.floor(Math.random() * colors.length)];
-
-      const size = 30 + Math.random() * 80;
-      const startX = Math.random() * window.innerWidth;
-      const startY = window.innerHeight + 40 + Math.random() * 60;
-      const riseHeight = -(window.innerHeight + 200 + Math.random() * 200);
-      const wobble = 10 + Math.random() * 30;
-      const duration = 1.0 + Math.random() * 0.6;
-      const delay = wave * 0.1 + Math.random() * 0.15;
-      const peakScale = 1.2 + Math.random() * 0.8;
-      const spreadX = (Math.random() - 0.5) * 60;
-
-      bubble.style.cssText = `
-        position:fixed;
-        width:${size}px; height:${size}px;
-        left:${startX}px; top:${startY}px;
-        --sx:${spreadX}px; --ty:${riseHeight}px;
-        --wobble:${wobble}px; --peak:${peakScale};
-        --dur:${duration}s; --delay:${delay}s;
-      `;
-      overlay.appendChild(bubble);
-    }
-  }
-
-  // Navigate after bubbles fill the screen
-  setTimeout(() => {
-    window.location.href = href;
-  }, 800);
-}
-
-document.querySelectorAll('a[href="packages.html"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    bubbleTransition(this.getAttribute('href'));
-  });
-});
+// (packages link click handler removed — links navigate normally)
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1320,105 +1320,11 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
-// VAN DRIVE ANIMATION ON BOOK BUTTON CLICK
-function launchVan(callback) {
-  const overlay = document.createElement('div');
-  overlay.className = 'van-overlay';
+// (van animation removed — Book buttons now go directly to booking page)
 
-  const road = document.createElement('div');
-  road.className = 'van-road';
-  const roadTexture = document.createElement('div');
-  roadTexture.className = 'van-road-texture';
-  road.appendChild(roadTexture);
-  const roadLines = document.createElement('div');
-  roadLines.className = 'van-road-lines';
-  road.appendChild(roadLines);
-  overlay.appendChild(road);
+// (Book button click handler removed — buttons navigate normally)
 
-  const van = document.createElement('img');
-  van.src = 'van.png';
-  van.className = 'van-img bouncing';
-  overlay.appendChild(van);
-  document.body.appendChild(overlay);
-
-  let smokeInterval = setInterval(() => {
-    const vanRect = van.getBoundingClientRect();
-    if (vanRect.left < -250 || vanRect.left > window.innerWidth + 250) return;
-    for (let i = 0; i < 3; i++) {
-      const smoke = document.createElement('div');
-      smoke.className = 'van-smoke';
-      const size = 15 + Math.random() * 25;
-      smoke.style.cssText = `
-        width:${size}px; height:${size}px;
-        left:${vanRect.left - 5 + Math.random() * 15}px;
-        top:${vanRect.bottom - 20 + Math.random() * 10}px;
-        --sd:${0.5 + Math.random() * 0.4}s;
-      `;
-      overlay.appendChild(smoke);
-      setTimeout(() => smoke.remove(), 900);
-    }
-  }, 60);
-
-  setTimeout(() => {
-    clearInterval(smokeInterval);
-    overlay.remove();
-    if (callback) callback();
-  }, 2000);
-}
-
-// Intercept Book buttons in package cards
-document.querySelectorAll('.pkg-card .btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    launchVan(() => {
-      window.location.href = href;
-    });
-  });
-});
-
-// BUBBLE REVEAL ON PAGE LOAD
-(function() {
-  const overlay = document.createElement('div');
-  overlay.className = 'bubble-reveal-overlay';
-  document.body.appendChild(overlay);
-
-  const colorClasses = ['white', 'white', 'gold', 'aqua', 'aqua', 'white'];
-  const totalBubbles = 100;
-  const w = window.innerWidth;
-  const h = window.innerHeight;
-
-  // Fill the screen with bubbles that pop in with staggered delays
-  for (let i = 0; i < totalBubbles; i++) {
-    const bubble = document.createElement('div');
-    const colorClass = colorClasses[Math.floor(Math.random() * colorClasses.length)];
-    bubble.className = 'reveal-bubble ' + colorClass;
-
-    const size = 30 + Math.random() * 90;
-    const x = Math.random() * (w + 100) - 50;
-    const y = Math.random() * (h + 100) - 50;
-    const popDelay = Math.random() * 0.4;
-    const popDur = 0.3 + Math.random() * 0.3;
-
-    bubble.style.cssText = `
-      width:${size}px; height:${size}px;
-      left:${x}px; top:${y}px;
-      --pop-delay:${popDelay}s;
-      --pop-dur:${popDur}s;
-    `;
-    overlay.appendChild(bubble);
-  }
-
-  // After bubbles fill the screen, clear them away to reveal the page
-  setTimeout(() => {
-    overlay.classList.add('clearing');
-  }, 900);
-
-  // Remove overlay entirely after fade
-  setTimeout(() => {
-    overlay.remove();
-  }, 1600);
-})();
+// (bubble reveal removed)
   </script>
 
   <!-- STICKY MOBILE CALL/TEXT BAR -->
