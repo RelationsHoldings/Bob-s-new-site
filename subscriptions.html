@@ -2688,6 +2688,111 @@ input:focus, select:focus, textarea:focus {
 
 /* ENSURE breadcrumbs work with .page-header padding */
 .breadcrumbs + .page-header { padding-top: 24px !important; }
+
+
+/* ============================================================
+   SUBSCRIPTIONS PAGE — BLACK & GOLD CONVERSION
+   Re-skins the membership builder, fleet calculator, modal,
+   and proof sections to match the rest of the site.
+   ============================================================ */
+
+:root {
+  --glass: rgba(26, 26, 26, 0.85);
+  --glass-border: rgba(240, 208, 0, 0.2);
+  --glass-hover: rgba(45, 45, 45, 0.9);
+  --card-border: rgba(240, 208, 0, 0.15);
+  --card-border-active: #f0d000;
+  --card-bg-active: rgba(240, 208, 0, 0.14);
+  --green: #3ddc84;
+  --green-bg: rgba(61, 220, 132, 0.12);
+  --green-border: rgba(61, 220, 132, 0.35);
+}
+
+/* Builder / calculator / modal headings + values -> light */
+.calc-config h2, .config-label, .size-name, .pkg-name, .freq-name,
+.summary-value, .summary-title, .summary-total, .savings-counter-stat-num,
+.fleet-fit-title, .fleet-card h2, .fleet-select, .fleet-result-value,
+.fleet-examples h3, .example-biz, .launch-tag, .addon-title,
+.fleet-tier-name, .modal-sel-value, .perk-pill,
+.modal-field label, .modal-field input, .modal-field select {
+  color: #f5f5f5 !important;
+}
+
+/* Secondary / muted text -> light gray */
+.size-examples, .summary-label, .fleet-tier-count, .modal-sel-label,
+.fleet-feature-text, .savings-counter-stat-label {
+  color: #c5c5c5 !important;
+}
+
+/* Card backgrounds (were translucent white) -> dark */
+.size-card, .pkg-radio, .freq-btn, .savings-counter-bar,
+.savings-counter-stat, .fleet-tier, .example-card, .perk-pill,
+.fleet-select, .modal-sel-row, .countdown-block {
+  background: rgba(26, 26, 26, 0.7) !important;
+  border-color: rgba(240, 208, 0, 0.15) !important;
+}
+
+/* Selected card states -> gold accent */
+.size-card.selected, .freq-btn.selected, .pkg-radio.selected {
+  background: rgba(240, 208, 0, 0.14) !important;
+  border-color: #f0d000 !important;
+  box-shadow: 0 0 0 1px #f0d000 !important;
+}
+.size-card.selected .size-name,
+.freq-btn.selected .freq-name,
+.pkg-radio.selected .pkg-name {
+  color: #f0d000 !important;
+}
+
+/* Locked step condensed cards */
+.config-group.locked-step .pkg-radio,
+.config-group.locked-step .size-card,
+.config-group.locked-step .freq-btn {
+  background: rgba(20, 20, 20, 0.5) !important;
+  border-color: rgba(240, 208, 0, 0.08) !important;
+}
+
+/* Lock hint pill */
+.lock-hint {
+  background: rgba(20, 20, 20, 0.92) !important;
+  border-color: rgba(240, 208, 0, 0.25) !important;
+  color: #f0d000 !important;
+}
+
+/* Mode toggle (personal / fleet) */
+.mode-btn { color: #c5c5c5 !important; }
+.mode-btn.active {
+  background: rgba(240, 208, 0, 0.16) !important;
+  color: #f0d000 !important;
+}
+
+/* Green accents (discounts) -> brighter green for dark bg */
+.fleet-tier-discount, .proof-stat-num.green, .freq-discount {
+  color: #3ddc84 !important;
+}
+
+/* Form inputs in the modal / quote builder */
+.modal-field input, .modal-field select, .modal-field textarea {
+  background: #1a1a1a !important;
+  color: #f5f5f5 !important;
+  border-color: rgba(240, 208, 0, 0.25) !important;
+}
+
+/* Perk pill text */
+.perk-pill { color: #f5f5f5 !important; }
+
+/* Pkg price text in builder */
+.pkg-price, .pkg-info { color: #c5c5c5 !important; }
+
+/* Dot indicators */
+.pkg-dot { border-color: rgba(240, 208, 0, 0.4) !important; }
+.pkg-radio.selected .pkg-dot { border-color: #f0d000 !important; background: #f0d000 !important; }
+
+/* Fleet feature checkmarks / text */
+.fleet-feature-text { color: #f5f5f5 !important; }
+
+/* Any leftover generic dark text inside builder containers -> light */
+.calc-config, .fleet-card, .builder-modal { color: #f5f5f5 !important; }
 </style>
 </head>
 <body>
