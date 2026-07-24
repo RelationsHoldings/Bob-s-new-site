@@ -653,7 +653,9 @@ input:focus, select:focus, textarea:focus {
           "Service: " + (f.service.value || '') + "\n\n" +
           "Notes:\n" + (f.notes.value || '')
         );
-        window.location.href = 'mailto:&#98;&#111;&#111;&#107;&#105;&#110;&#103;&#115;&#64;&#98;&#111;&#98;&#115;&#100;&#101;&#116;&#97;&#105;&#108;&#105;&#110;&#103;&#112;&#103;&#104;&#46;&#99;&#111;&#109;?subject=' + subject + '&body=' + body;
+        // Google Ads conversion: Submit lead form
+        gtag('event', 'conversion', {'send_to': 'AW-18328795342/R9_8COaXhtYcEM7x7KNE'});
+        window.location.href = 'mailto:' + ['bookings', 'bobsdetailingpgh.com'].join('@') + '?subject=' + subject + '&body=' + body;
         return false;
       }
     </script>
