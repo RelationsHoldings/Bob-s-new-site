@@ -125,7 +125,7 @@ These items are in the original strategy script but require info or decisions on
 | Phone | (412) 925-8970 |
 | Email | bookings@bobsdetailingpgh.com |
 | Hours | 8am to 6pm, Monday thru Sunday |
-| Booking URL | https://bobsdetailing1.fieldd.co |
+| Contact / Quote form | https://www.bobsdetailingpgh.com/contact.html |
 | GA4 ID | G-EPF4EF1DVM |
 | Domain | https://www.bobsdetailingpgh.com |
 | Pricing | Daily Driver $175 / Bob's Signature $275 / Showroom Shine $350 |
