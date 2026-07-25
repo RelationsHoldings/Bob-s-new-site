@@ -1649,7 +1649,7 @@ input:focus, select:focus, textarea:focus {
 /* ENSURE breadcrumbs work with .page-header padding */
 .breadcrumbs + .page-header { padding-top: 24px !important; }
 
-/* QUOTE CTA SECTION */
+/* FIELDD LEAD FORM SECTION */
 .lead-form-section {
   background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
   padding: 80px 24px 80px;
@@ -1682,6 +1682,10 @@ input:focus, select:focus, textarea:focus {
   padding: 28px 24px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
+.lead-form-wrap fieldd-lead-form {
+  display: block;
+  width: 100%;
+}
 @media (max-width: 768px) {
   .lead-form-section { padding: 56px 16px 56px; }
   .lead-form-wrap { padding: 20px 16px; border-radius: 16px; }
@@ -1692,6 +1696,7 @@ input:focus, select:focus, textarea:focus {
   .lead-form-wrap { padding: 16px 12px; }
 }
 </style>
+  <script type="text/javascript" src="https://fieldd.me/lead-form"></script>
 </head>
 <body>
 
@@ -1707,7 +1712,7 @@ input:focus, select:focus, textarea:focus {
         <a href="subscriptions.html">Subscriptions</a>
         <a href="#reviews">Reviews</a>
       </div>
-      <a href="contact.html#quoteForm" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Now</a>
+      <a href="index.html#lead-form" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -1720,7 +1725,7 @@ input:focus, select:focus, textarea:focus {
     <a href="packages.html" class="mobile-link">Packages</a>
     <a href="subscriptions.html" class="mobile-link">Subscriptions</a>
     <a href="#reviews" class="mobile-link">Reviews</a>
-    <a href="contact.html#quoteForm" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Now</a>
+    <a href="index.html#lead-form" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Now</a>
   </div>
 
   <!-- HERO. MAGAZINE GRID -->
@@ -1738,7 +1743,7 @@ input:focus, select:focus, textarea:focus {
         <h1 class="hero-title">We Bring the <em>Showroom</em> to Your Driveway</h1>
         <p class="hero-sub">10+ years perfecting our craft. Any make, any model. Mobile detailing across the greater Pittsburgh area.</p>
         <div class="hero-btns">
-          <a href="contact.html#quoteForm" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Your Detail</a>
+          <a href="index.html#lead-form" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Your Detail</a>
           <a href="packages.html" class="btn btn-glass btn-lg">View Packages</a>
         </div>
       <div class="cta-trust-row">
@@ -1764,17 +1769,16 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- QUOTE CTA -->
+  <!-- FIELDD LEAD FORM -->
   <section class="lead-form-section" id="lead-form">
     <div class="container lead-form-container">
       <div class="lead-form-header">
         <span class="section-tag">Get a Free Quote</span>
-        <h2 class="lead-form-title">Ready to book your <span style="color:#f0d000;">detail</span>?</h2>
-        <p class="lead-form-sub">Tell us about your vehicle and we'll text or email you back with pricing, availability, and next steps. No sales pressure.</p>
+        <h2 class="lead-form-title">Tell us about your <span style="color:#f0d000;">vehicle</span></h2>
+        <p class="lead-form-sub">Fill out the form below and we'll text or email you back with pricing, availability, and next steps. No sales pressure.</p>
       </div>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-        <a href="contact.html#quoteForm" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'home-quote-cta'});">Request a Free Quote</a>
-        <a href="tel:4129258970" class="btn btn-glass btn-lg" onclick="gtag('event', 'phone_click', {'location': 'home-quote-cta'});">Call (412) 925-8970</a>
+      <div class="lead-form-wrap">
+        <fieldd-lead-form code="NgfYIz"></fieldd-lead-form>
       </div>
     </div>
   </section>
@@ -2000,7 +2004,7 @@ input:focus, select:focus, textarea:focus {
     <div class="container cta-inner">
       <h2 class="cta-title">Ready for a <span class="gold">Showroom</span> Finish?</h2>
       <p class="cta-sub">Book your mobile detail today. We come to you, anywhere in the Pittsburgh area.</p>
-      <a href="contact.html#quoteForm" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Your Detail Now</a>
+      <a href="index.html#lead-form" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'home'});">Book Your Detail Now</a>
       <div class="cta-trust-row">
         <span class="trust-pill">5.0 Star Rated</span>
         <span class="trust-pill">100% Satisfaction Guarantee</span>
@@ -2029,7 +2033,7 @@ input:focus, select:focus, textarea:focus {
           <a href="#area" class="footer-link">Service Area</a>
           <a href="subscriptions.html" class="footer-link">Subscriptions</a>
           <a href="#reviews" class="footer-link">Reviews</a>
-          <a href="contact.html#quoteForm" class="footer-link">Book Now</a>
+          <a href="index.html#lead-form" class="footer-link">Book Now</a>
         </div>
         <div>
           <h5 class="footer-heading">Services</h5>
