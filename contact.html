@@ -187,6 +187,11 @@
 .social-link:hover { border-color: #f0d000; }
 .social-link svg { width: 26px; height: 26px; color: #f0d000; flex-shrink: 0; }
 .social-link strong { color: #fff; }
+.area-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.area-tag { border-radius: 50px; padding: 7px 16px; font-size: 0.8rem; font-weight: 700; transition: all 0.2s; }
+.area-tag:hover { transform: translateY(-1px); }
+@media (max-width: 768px) { .hours-grid { grid-template-columns: 1fr !important; } }
+@media (max-width: 480px) { .area-tag { padding: 6px 12px; font-size: 0.75rem; } }
 </style>
   <script type="text/javascript" src="https://fieldd.me/lead-form"></script>
 </head>
@@ -304,7 +309,25 @@
           <div class="trust-title" style="margin-bottom:14px;">Service Area</div>
           <div style="font-size:0.95rem;font-weight:700;color:var(--text);">Based in Cranberry Township</div>
           <div style="font-size:1.05rem;font-weight:700;color:var(--aqua-dark);margin:6px 0 14px;">30-mile radius around Pittsburgh</div>
-          <div style="font-size:0.88rem;font-weight:600;color:var(--text-light);line-height:1.6;">Pittsburgh, Cranberry, Wexford, Sewickley, Mt. Lebanon, Mars, Robinson, Bethel Park, Allison Park, Coraopolis, and surrounding areas.</div>
+          <div class="area-tags">
+            <span class="area-tag">Pittsburgh</span>
+            <span class="area-tag">Cranberry Township</span>
+            <span class="area-tag">Wexford</span>
+            <span class="area-tag">West View</span>
+            <span class="area-tag">Fox Chapel</span>
+            <span class="area-tag">Franklin Park</span>
+            <span class="area-tag">Sewickley</span>
+            <span class="area-tag">Allison Park</span>
+            <span class="area-tag">Bethel Park</span>
+            <span class="area-tag">Butler</span>
+            <span class="area-tag">Grove City</span>
+            <span class="area-tag">Aliquippa</span>
+            <span class="area-tag">Coraopolis</span>
+            <span class="area-tag">Canonsburg</span>
+            <span class="area-tag">Zelienople</span>
+            <span class="area-tag">Oakmont</span>
+            <span class="area-tag">Murrysville</span>
+          </div>
         </div>
       </div>
     </div>
