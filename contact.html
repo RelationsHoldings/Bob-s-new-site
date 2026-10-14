@@ -188,6 +188,14 @@
 .social-link svg { width: 26px; height: 26px; color: #f0d000; flex-shrink: 0; }
 .social-link strong { color: #fff; }
 .area-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1100px; margin: 0 auto; }
+.area-map-wrap { border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 3px solid rgba(240, 208, 0, 0.3); aspect-ratio: 1/1; }
+.area-map-wrap iframe { width: 100%; height: 100%; border: 0; }
+.area-info h3 { font-size: 1.6rem; font-weight: 900; color: #f5f5f5; margin-bottom: 12px; }
+.area-info > p { font-size: 1rem; color: var(--text-light); line-height: 1.7; margin-bottom: 28px; font-weight: 600; }
+@media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; } .area-map-wrap { order: -1; max-width: 500px; width: 100%; margin: 0 auto; aspect-ratio: 4/3; } }
+@media (max-width: 768px) { .area-tags { justify-content: center; } .area-info h3 { font-size: 1.4rem; } }
+
 .area-tag { border-radius: 50px; padding: 7px 16px; font-size: 0.8rem; font-weight: 700; transition: all 0.2s; }
 .area-tag:hover { transform: translateY(-1px); }
 @media (max-width: 768px) { .hours-grid { grid-template-columns: 1fr !important; } }
@@ -309,6 +317,22 @@
           <div class="trust-title" style="margin-bottom:14px;">Service Area</div>
           <div style="font-size:0.95rem;font-weight:700;color:var(--text);">Based in Cranberry Township</div>
           <div style="font-size:1.05rem;font-weight:700;color:var(--aqua-dark);margin:6px 0 14px;">30-mile radius around Pittsburgh</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Coverage Map</span>
+        <h2 class="section-title">Where We <span class="gold">Serve</span></h2>
+      </div>
+      <div class="area-grid">
+        <div class="area-info">
+          <h3>All of Pittsburgh &amp; Surrounding Areas</h3>
+          <p>No need to drop off your car anywhere. We bring the full detailing setup right to your driveway, office, or wherever your vehicle is parked.</p>
           <div class="area-tags">
             <span class="area-tag">Pittsburgh</span>
             <span class="area-tag">Cranberry Township</span>
@@ -329,19 +353,9 @@
             <span class="area-tag">Murrysville</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="section section-white">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Coverage Map</span>
-        <h2 class="section-title">Where We <span class="gold">Serve</span></h2>
-      </div>
-      <div style="max-width:920px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);border:3px solid var(--white);aspect-ratio:16/9;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d389000!2d-80.05!3d40.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:0;"></iframe>
+        <div class="area-map-wrap">
+          <iframe title="Bob's Detailing service area in the Pittsburgh, PA metropolitan area" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d389000!2d-80.05!3d40.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:0;"></iframe>
+        </div>
       </div>
     </div>
   </section>
