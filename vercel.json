@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/services", "destination": "/packages.html" },
+    { "source": "/fleet-group-detailing", "destination": "/fleet-group-detailing.html" }
+  ],
+  "redirects": [
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/packages.html", "destination": "/services", "permanent": true },
+    { "source": "/fleet-group-detailing.html", "destination": "/fleet-group-detailing", "permanent": true },
+    { "source": "/subscriptions.html", "destination": "/fleet-group-detailing", "permanent": true },
+    { "source": "/subscriptions", "destination": "/fleet-group-detailing", "permanent": true }
+  ]
+}

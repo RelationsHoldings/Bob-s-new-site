@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing</title>
+  <title>Services | Bob's Detailing | Pittsburgh Mobile Car Detailing</title>
   <meta name="description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
-  <link rel="canonical" href="https://www.bobsdetailingpgh.com/packages.html">
+  <link rel="canonical" href="https://www.bobsdetailingpgh.com/services">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.bobsdetailingpgh.com/packages.html">
-  <meta property="og:title" content="Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing">
+  <meta property="og:url" content="https://www.bobsdetailingpgh.com/services">
+  <meta property="og:title" content="Services | Bob's Detailing | Pittsburgh Mobile Car Detailing">
   <meta property="og:description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
   <meta property="og:image" content="https://www.bobsdetailingpgh.com/logo.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Packages | Bob's Detailing | Pittsburgh Mobile Car Detailing">
+  <meta name="twitter:title" content="Services | Bob's Detailing | Pittsburgh Mobile Car Detailing">
   <meta name="twitter:description" content="Shop-quality results with mobile convenience. Choose from Daily Driver, Bob's Signature, or Showroom Shine detailing packages.">
   <meta name="twitter:image" content="https://www.bobsdetailingpgh.com/logo.png">
 
@@ -1138,6 +1138,47 @@ input:focus, select:focus, textarea:focus {
 
 /* ENSURE breadcrumbs work with .page-header padding */
 .breadcrumbs + .page-header { padding-top: 24px !important; }
+
+/* Services page: grouped feature lists, interior/exterior-only, add-ons, a la carte */
+.pkg-groups { flex: 1; margin-bottom: 28px; }
+.pkg-groups .pkg-features { flex: none; margin-bottom: 16px; }
+.pkg-groups .pkg-features:last-child { margin-bottom: 0; }
+.pkg-group-label {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold-deep); margin: 0 0 10px;
+}
+.pkg-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
+.svc-more { padding-bottom: 72px; }
+.svc-head { text-align: center; max-width: 720px; margin: 0 auto 32px; }
+.svc-head h2, .addon-banner h2 { font-size: 2rem; font-weight: 900; color: #fff; margin-bottom: 8px; }
+.svc-head h2 .gold, .addon-banner h2 .gold { color: #f0d000; }
+.svc-head p, .addon-banner p { font-weight: 600; color: var(--text-light); }
+.addon-banner {
+  max-width: 1140px; margin: 0 auto; text-align: center;
+  background: var(--white); border: 2px solid rgba(240, 208, 0, 0.35); border-radius: 24px;
+  padding: 36px 28px; box-shadow: var(--shadow-sm);
+}
+.addon-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+.addon-tag {
+  display: inline-block; padding: 9px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+  color: #f5f5f5; background: rgba(240, 208, 0, 0.08); border: 1px solid rgba(240, 208, 0, 0.4);
+  text-decoration: none;
+}
+a.addon-tag:hover { background: rgba(240, 208, 0, 0.25); }
+.alc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 1140px; margin: 0 auto; }
+.alc-card {
+  background: var(--white); border-radius: 20px; padding: 28px 22px; text-decoration: none;
+  border: 2px solid transparent; box-shadow: var(--shadow-sm); transition: all 0.3s var(--ease);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.alc-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.alc-card h3 { font-size: 1.15rem; font-weight: 900; color: #fff; }
+.alc-card span { font-size: 0.85rem; font-weight: 700; color: #f0d000; }
+@media (max-width: 900px) {
+  .pkg-grid-2 { grid-template-columns: 1fr; max-width: 480px; }
+  .alc-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) { .alc-grid { grid-template-columns: 1fr; } .svc-head h2, .addon-banner h2 { font-size: 1.6rem; } }
 </style>
 </head>
 <body>
@@ -1155,12 +1196,12 @@ input:focus, select:focus, textarea:focus {
         <img src="logo.png" alt="Bob's Detailing" class="nav-logo-img">
       </a>
       <div class="nav-links">
-        <a href="index.html#area">Service Area</a>
-        <a href="packages.html" class="active">Packages</a>
-        <a href="subscriptions.html">Subscriptions</a>
+        <a href="/services" class="active">Services</a>
+        <a href="/fleet-group-detailing">Fleet &amp; Group</a>
         <a href="index.html#reviews">Reviews</a>
+        <a href="/contact">Contact</a>
       </div>
-      <a href="index.html#lead-form" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
+      <a href="/contact" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -1169,16 +1210,15 @@ input:focus, select:focus, textarea:focus {
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#area" class="mobile-link">Service Area</a>
-    <a href="packages.html" class="mobile-link">Packages</a>
-    <a href="subscriptions.html" class="mobile-link">Subscriptions</a>
+    <a href="/contact" class="mobile-link">Contact</a>
+    <a href="/services" class="mobile-link">Services</a>
+    <a href="/fleet-group-detailing" class="mobile-link">Fleet &amp; Group</a>
     <a href="index.html#reviews" class="mobile-link">Reviews</a>
-    <a href="index.html#lead-form" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
+    <a href="/contact" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'packages'});">Book Now</a>
   </div>
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <span class="section-tag">Our Premier Packages</span>
     <h1>Our Premier <span class="gold">Packages</span></h1>
     <p>Shop-quality results. Mobile convenience. Honest pricing.</p>
   </div>
@@ -1190,19 +1230,31 @@ input:focus, select:focus, textarea:focus {
       <!-- DAILY DRIVER -->
       <div class="pkg-card" data-reveal>
         <h3 class="pkg-name">Daily Driver</h3>
-        <p class="pkg-desc">Best for daily commuters and well-kept vehicles that need a regular reset to stay sharp.</p>
+        <p class="pkg-desc">Best for daily commuters and well-kept vehicles that need regular maintenance to stay sharp.</p>
         <div class="pkg-price">
           <span class="pkg-price-label">Starting at</span>
           <span class="pkg-price-amount">$175</span>
         </div>
         <div class="pkg-divider"></div>
-        <ul class="pkg-features">
-          <li>Full hand wash using pH-balanced foam and microfiber mitts with wheels, tires, and wheel wells scrubbed and degreased down to bare surfaces</li>
-          <li>Quick protectant sealant applied by hand to guard against UV damage and keep your paint looking fresh between details</li>
-          <li>Complete vacuum with crevice extraction and compressed air blowout to reach every seam, vent, and pockets</li>
-          <li>All surfaces wiped and dressed with UV protectant, interior glass cleaned streak-free</li>
-        </ul>
-        <a href="index.html#lead-form" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
+        <div class="pkg-groups">
+          <p class="pkg-group-label">Interior</p>
+          <ul class="pkg-features">
+            <li>Full vacuum &amp; compressed air blowout</li>
+            <li>Floor mats cleaned</li>
+            <li>All leather, plastic, and vinyl surfaces detailed</li>
+            <li>All windows and glass cleaned streak-free</li>
+          </ul>
+          <p class="pkg-group-label">Exterior</p>
+          <ul class="pkg-features">
+            <li>Wheels, tires, and wheel wells cleaned</li>
+            <li>Contact wash with microfiber mitts</li>
+            <li>Paint decontamination treatment</li>
+            <li>Door jams cleaned</li>
+            <li>Exterior protectant applied</li>
+            <li>Tire dressing applied</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
       </div>
 
       <!-- BOB'S SIGNATURE -->
@@ -1215,13 +1267,25 @@ input:focus, select:focus, textarea:focus {
           <span class="pkg-price-amount">$275</span>
         </div>
         <div class="pkg-divider"></div>
-        <ul class="pkg-features">
-          <li>Pre-foam soak and full hand wash, clay bar paint decontamination for a glass-smooth finish, and wheels deep-cleaned and dressed</li>
-          <li>One coat of hand-applied wax for a warm, deep shine with tire dressing for a rich, lasting finish</li>
-          <li>Fabric seats, carpets, and mats shampooed and hot-water extracted to pull out deep-set stains and odors</li>
-          <li>All leather, vinyl, and plastic surfaces detailed and conditioned, full vacuum with crevice extraction, and interior glass cleaned streak-free</li>
-        </ul>
-        <a href="index.html#lead-form" class="btn btn-gold" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
+        <div class="pkg-groups">
+          <p class="pkg-group-label">Interior</p>
+          <ul class="pkg-features">
+            <li>Full vacuum &amp; compressed air blowout</li>
+            <li>Carpets and floor mats shampooed &amp; scrubbed</li>
+            <li>All leather, plastic, and vinyl surfaces detailed</li>
+            <li>All windows and glass cleaned streak-free</li>
+          </ul>
+          <p class="pkg-group-label">Exterior</p>
+          <ul class="pkg-features">
+            <li>Wheels, tires, and wheel wells cleaned</li>
+            <li>Contact wash with microfiber mitts</li>
+            <li>Paint decontamination &amp; iron removal treatment</li>
+            <li>Door jams cleaned</li>
+            <li>Ceramic-property exterior protectant applied</li>
+            <li>Tire dressing applied</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-gold" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
       </div>
 
       <!-- SHOWROOM SHINE -->
@@ -1233,15 +1297,91 @@ input:focus, select:focus, textarea:focus {
           <span class="pkg-price-amount">$350</span>
         </div>
         <div class="pkg-divider"></div>
-        <ul class="pkg-features">
-          <li>Premium synthetic sealant replaces standard wax, engineered for superior durability, UV resistance, and a high-gloss finish that protects for months, not weeks</li>
-          <li>Hydrophobic surface protectant seals your paint so water beads and sheets off on contact, shielding against contaminants, bird droppings, and mineral deposits</li>
-          <li>Every leather, vinyl, and plastic surface sealed with a dedicated UV and stain protectant creating an invisible barrier against sun fading, spills, and daily wear</li>
-          <li>Deep steam extraction and sanitization of all fabric surfaces to eliminate embedded allergens, bacteria, and odors at the fiber level</li>
-        </ul>
-        <a href="index.html#lead-form" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
+        <div class="pkg-groups">
+          <ul class="pkg-features">
+            <li>Includes every feature in our Bob&rsquo;s Signature Detail Package</li>
+          </ul>
+          <p class="pkg-group-label">Also includes</p>
+          <ul class="pkg-features">
+            <li>Upgraded exterior protection &amp; tire dressing</li>
+            <li>Adds interior protection to high-touch surfaces to protect from daily wear</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'packages'});">Get a Quote</a>
       </div>
 
+    </div>
+  </div>
+
+  <!-- INTERIOR-ONLY / EXTERIOR-ONLY (from Bob's Signature) -->
+  <div class="pkg-section svc-more">
+    <div class="svc-head">
+      <h2>Just the Inside or <span class="gold">Just the Outside</span></h2>
+      <p>The same work as our Bob&rsquo;s Signature Detail, for when only one half of the car needs it.</p>
+    </div>
+    <div class="pkg-grid pkg-grid-2">
+      <div class="pkg-card" data-reveal>
+        <h3 class="pkg-name">Interior Detail</h3>
+        <p class="pkg-desc">The full interior from our Bob&rsquo;s Signature Detail.</p>
+        <div class="pkg-divider"></div>
+        <div class="pkg-groups">
+          <ul class="pkg-features">
+            <li>Full vacuum &amp; compressed air blowout</li>
+            <li>Carpets and floor mats shampooed &amp; scrubbed</li>
+            <li>All leather, plastic, and vinyl surfaces detailed</li>
+            <li>All windows and glass cleaned streak-free</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'services', 'item': 'interior'});">Get a Quote</a>
+      </div>
+      <div class="pkg-card" data-reveal>
+        <h3 class="pkg-name">Exterior Detail</h3>
+        <p class="pkg-desc">The full exterior from our Bob&rsquo;s Signature Detail.</p>
+        <div class="pkg-divider"></div>
+        <div class="pkg-groups">
+          <ul class="pkg-features">
+            <li>Wheels, tires, and wheel wells cleaned</li>
+            <li>Contact wash with microfiber mitts</li>
+            <li>Paint decontamination &amp; iron removal treatment</li>
+            <li>Door jams cleaned</li>
+            <li>Ceramic-property exterior protectant applied</li>
+            <li>Tire dressing applied</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-glass" onclick="gtag('event', 'lead_form_click', {'page': 'services', 'item': 'exterior'});">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD-ON SERVICES -->
+  <div class="pkg-section svc-more">
+    <div class="addon-banner" data-reveal>
+      <h2>Add-On <span class="gold">Services</span></h2>
+      <p>Add any of these to a package.</p>
+      <div class="addon-tags">
+        <a href="pet-hair-removal.html" class="addon-tag">Pet Hair Removal</a>
+        <span class="addon-tag">Upgraded Exterior Protection</span>
+        <span class="addon-tag">Glass Coating</span>
+        <span class="addon-tag">Stain Removal</span>
+        <span class="addon-tag">Premium Tire Dressing</span>
+        <span class="addon-tag">Engine Bay Cleaning</span>
+        <span class="addon-tag">Upgraded Leather Conditioner</span>
+        <span class="addon-tag">Odor Removal</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- A LA CARTE -->
+  <div class="pkg-section svc-more">
+    <div class="svc-head">
+      <h2>&Agrave; La Carte <span class="gold">Services</span></h2>
+      <p>Book these on their own or alongside any package.</p>
+    </div>
+    <div class="alc-grid">
+      <a href="ceramic-coating.html" class="alc-card" data-reveal><h3>Ceramic Coating</h3><span>Learn more &rarr;</span></a>
+      <a href="/contact" class="alc-card" data-reveal><h3>Window Tinting</h3><span>Get a quote &rarr;</span></a>
+      <a href="paint-correction.html" class="alc-card" data-reveal><h3>Paint Correction</h3><span>Learn more &rarr;</span></a>
+      <a href="headlight-restoration.html" class="alc-card" data-reveal><h3>Headlight Restoration</h3><span>Learn more &rarr;</span></a>
     </div>
   </div>
 
@@ -1255,15 +1395,15 @@ input:focus, select:focus, textarea:focus {
         </div>
         <div>
           <h5 class="footer-heading">Packages</h5>
-          <a href="packages.html" class="footer-link">Bob's Signature</a>
-          <a href="packages.html" class="footer-link">Daily Driver</a>
-          <a href="packages.html" class="footer-link">Showroom Shine</a>
+          <a href="/services" class="footer-link">Bob's Signature</a>
+          <a href="/services" class="footer-link">Daily Driver</a>
+          <a href="/services" class="footer-link">Showroom Shine</a>
         </div>
         <div>
           <h5 class="footer-heading">Quick Links</h5>
           <a href="index.html#area" class="footer-link">Service Area</a>
           <a href="index.html#reviews" class="footer-link">Reviews</a>
-          <a href="index.html#lead-form" class="footer-link">Book Now</a>
+          <a href="/contact" class="footer-link">Book Now</a>
         </div>
         <div>
           <h5 class="footer-heading">Services</h5>
@@ -1296,7 +1436,7 @@ input:focus, select:focus, textarea:focus {
           <a href="moon-township.html" class="footer-link">Moon Township</a>
           <a href="bridgeville.html" class="footer-link">Bridgeville</a>
           <a href="about.html" class="footer-link">About</a>
-          <a href="contact.html" class="footer-link">Contact</a>
+          <a href="/contact" class="footer-link">Contact</a>
         </div>
         <div>
           <h5 class="footer-heading">Contact</h5>

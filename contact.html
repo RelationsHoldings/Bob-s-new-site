@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Bob's Detailing | Mobile Car Detailing Pittsburgh & Cranberry Township</title>
   <meta name="description" content="Book mobile car detailing in Pittsburgh. Call or text (412) 925-8970, email, or use our online booking. Serving Pittsburgh & 30-mile radius.">
-  <link rel="canonical" href="https://www.bobsdetailingpgh.com/contact.html">
+  <link rel="canonical" href="https://www.bobsdetailingpgh.com/contact">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.bobsdetailingpgh.com/contact.html">
+  <meta property="og:url" content="https://www.bobsdetailingpgh.com/contact">
   <meta property="og:title" content="Contact Bob's Detailing | Mobile Car Detailing Pittsburgh & Cranberry Township">
   <meta property="og:description" content="Book mobile car detailing in Pittsburgh. Call or text (412) 925-8970, email, or use our online booking. Serving Pittsburgh & 30-mile radius.">
   <meta property="og:image" content="https://www.bobsdetailingpgh.com/logo.png">
@@ -128,6 +128,67 @@
 </script>
 
   <link rel="stylesheet" href="styles.css">
+<style>
+/* Fieldd lead form (same look as the homepage) */
+.lead-form-section {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  padding: 80px 24px 80px;
+  position: relative; z-index: 2;
+  border-top: 1px solid rgba(240, 208, 0, 0.2);
+  border-bottom: 1px solid rgba(240, 208, 0, 0.2);
+}
+.lead-form-container { max-width: 760px; margin: 0 auto; }
+.lead-form-header { text-align: center; margin-bottom: 36px; }
+.lead-form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  color: #f5f5f5;
+  margin: 12px 0 10px;
+}
+.lead-form-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c5c5c5;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto;
+}
+.lead-form-wrap {
+  background: #1a1a1a;
+  border: 1px solid rgba(240, 208, 0, 0.25);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+.lead-form-wrap fieldd-lead-form {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .lead-form-section { padding: 56px 16px 56px; }
+  .lead-form-wrap { padding: 20px 16px; border-radius: 16px; }
+  .lead-form-header { margin-bottom: 28px; }
+}
+@media (max-width: 480px) {
+  .lead-form-section { padding: 48px 12px; }
+  .lead-form-wrap { padding: 16px 12px; }
+}
+
+/* Contact: social strip */
+.social-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; max-width: 1000px; margin: 0 auto; }
+.social-strip-label { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #f0d000; }
+.social-link {
+  display: flex; align-items: center; gap: 12px; padding: 14px 22px; border-radius: 16px; text-decoration: none;
+  background: #1a1a1a; border: 1px solid rgba(240, 208, 0, 0.25); color: #e5e5e5; font-size: 0.85rem; line-height: 1.35;
+  transition: border-color 0.2s;
+}
+.social-link:hover { border-color: #f0d000; }
+.social-link svg { width: 26px; height: 26px; color: #f0d000; flex-shrink: 0; }
+.social-link strong { color: #fff; }
+</style>
+  <script type="text/javascript" src="https://fieldd.me/lead-form"></script>
 </head>
 <body>
 
@@ -144,7 +205,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Services <span class="nav-arrow"></span></span>
+          <a href="/services" class="nav-dropdown-trigger">Services <span class="nav-arrow"></span></a>
           <div class="nav-dropdown-menu">
             <a href="ceramic-coating.html">Ceramic Coating</a>
           <a href="paint-correction.html">Paint Correction</a>
@@ -158,29 +219,11 @@
             <a href="luxury-car-detailing.html">Luxury Car Detailing</a>
           </div>
         </div>
-        <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Service Areas <span class="nav-arrow"></span></span>
-          <div class="nav-dropdown-menu">
-            <a href="pittsburgh.html">Pittsburgh</a>
-          <a href="cranberry-township.html">Cranberry Township</a>
-          <a href="wexford.html">Wexford</a>
-          <a href="sewickley.html">Sewickley</a>
-          <a href="mt-lebanon.html">Mt. Lebanon</a>
-            <a href="shadyside.html">Shadyside</a>
-            <a href="squirrel-hill.html">Squirrel Hill</a>
-            <a href="lawrenceville.html">Lawrenceville</a>
-            <a href="strip-district.html">Strip District</a>
-            <a href="robinson.html">Robinson Township</a>
-            <a href="moon-township.html">Moon Township</a>
-            <a href="bridgeville.html">Bridgeville</a>
-          </div>
-        </div>
-        <a href="packages.html">Packages</a>
-        <a href="subscriptions.html">Subscriptions</a>
+        <a href="/fleet-group-detailing">Fleet &amp; Group</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="#lead-form" class="active">Contact</a>
       </div>
-      <a href="index.html#lead-form" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'nav'});">Book Now</a>
+      <a href="#lead-form" class="btn btn-gold nav-cta" onclick="gtag('event', 'book_now_click', {'page': 'nav'});">Book Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -189,7 +232,7 @@
 
   <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" class="mobile-link">Home</a>
-      <span class="mobile-section-label">Services</span>
+      <a href="/services" class="mobile-link">Services</a>
       <a href="ceramic-coating.html" class="mobile-link indent">Ceramic Coating</a>
       <a href="paint-correction.html" class="mobile-link indent">Paint Correction</a>
       <a href="interior-detailing.html" class="mobile-link indent">Interior Detailing</a>
@@ -200,24 +243,10 @@
         <a href="bmw-detailing.html" class="mobile-link indent">BMW Detailing</a>
         <a href="truck-suv-detailing.html" class="mobile-link indent">Truck &amp; SUV Detailing</a>
         <a href="luxury-car-detailing.html" class="mobile-link indent">Luxury Car Detailing</a>
-      <span class="mobile-section-label">Service Areas</span>
-      <a href="pittsburgh.html" class="mobile-link indent">Pittsburgh</a>
-      <a href="cranberry-township.html" class="mobile-link indent">Cranberry Township</a>
-      <a href="wexford.html" class="mobile-link indent">Wexford</a>
-      <a href="sewickley.html" class="mobile-link indent">Sewickley</a>
-      <a href="mt-lebanon.html" class="mobile-link indent">Mt. Lebanon</a>
-        <a href="shadyside.html" class="mobile-link indent">Shadyside</a>
-        <a href="squirrel-hill.html" class="mobile-link indent">Squirrel Hill</a>
-        <a href="lawrenceville.html" class="mobile-link indent">Lawrenceville</a>
-        <a href="strip-district.html" class="mobile-link indent">Strip District</a>
-        <a href="robinson.html" class="mobile-link indent">Robinson Township</a>
-        <a href="moon-township.html" class="mobile-link indent">Moon Township</a>
-        <a href="bridgeville.html" class="mobile-link indent">Bridgeville</a>
-      <a href="packages.html" class="mobile-link">Packages</a>
-      <a href="subscriptions.html" class="mobile-link">Subscriptions</a>
+      <a href="/fleet-group-detailing" class="mobile-link">Fleet &amp; Group</a>
       <a href="about.html" class="mobile-link">About</a>
-      <a href="contact.html" class="mobile-link">Contact</a>
-      <a href="index.html#lead-form" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'mobile-nav'});">Book Now</a>
+      <a href="#lead-form" class="mobile-link">Contact</a>
+      <a href="#lead-form" class="btn btn-gold mobile-cta" onclick="gtag('event', 'book_now_click', {'page': 'mobile-nav'});">Book Now</a>
     </div>
 
   <!-- HERO -->
@@ -226,6 +255,20 @@
     <h1>Get in <span class="gold">Touch</span>. We Come to You</h1>
     <p>The fastest way to book is online. The easiest way to ask a question is by text. Take your pick.</p>
   </div>
+
+  <!-- LEAD FORM (Fieldd) — every "Book Now" on the site lands here -->
+  <section class="lead-form-section" id="lead-form">
+    <div class="container lead-form-container">
+      <div class="lead-form-header">
+        <span class="section-tag">Get a Free Quote</span>
+        <h2 class="lead-form-title">Tell us about your <span style="color:#f0d000;">vehicle</span></h2>
+        <p class="lead-form-sub">Fill out the form below and we'll text or email you back with pricing, availability, and next steps. No sales pressure.</p>
+      </div>
+      <div class="lead-form-wrap">
+        <fieldd-lead-form code="NgfYIz"></fieldd-lead-form>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT GRID -->
   <section class="section section-white" style="padding-top:30px;">
@@ -239,13 +282,30 @@
         <div class="trust-card" data-reveal>
           <div class="trust-title">Book Online</div>
           <div class="trust-desc" style="margin-bottom:18px;">See available dates, pick your service, and lock it in. Takes about 60 seconds.</div>
-          <a href="index.html#lead-form" class="btn btn-gold" onclick="gtag('event', 'book_now_click', {'page': 'contact'});">Book a Detail</a>
+          <a href="#lead-form" class="btn btn-gold" onclick="gtag('event', 'book_now_click', {'page': 'contact'});">Book a Detail</a>
         </div>
         <div class="trust-card" data-reveal>
           <div class="trust-title">Email</div>
           <div class="trust-desc" style="margin-bottom:18px;">For longer questions, fleet inquiries, or anything that doesn't need an immediate reply.</div>
           <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#111;&#111;&#107;&#105;&#110;&#103;&#115;&#64;&#98;&#111;&#98;&#115;&#100;&#101;&#116;&#97;&#105;&#108;&#105;&#110;&#103;&#112;&#103;&#104;&#46;&#99;&#111;&#109;" class="btn btn-gold">Email Us</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="section section-white" style="padding-top:0;">
+    <div class="container">
+      <div class="social-strip">
+        <span class="social-strip-label">Follow along</span>
+        <a href="https://www.instagram.com/bobsdetailingpgh/" target="_blank" rel="noopener" class="social-link" onclick="gtag('event', 'social_click', {'network': 'instagram', 'page': 'contact'});">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <span>Instagram<br><strong>@bobsdetailingpgh</strong></span>
+        </a>
+        <a href="https://www.facebook.com/p/Bobs-Detailing-100057306226157/" target="_blank" rel="noopener" class="social-link" onclick="gtag('event', 'social_click', {'network': 'facebook', 'page': 'contact'});">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg>
+          <span>Facebook<br><strong>Bob&rsquo;s Detailing</strong></span>
+        </a>
       </div>
     </div>
   </section>
@@ -287,378 +347,6 @@
     </div>
   </section>
 
-  <!-- CONTACT FORM (mailto) -->
-  <section class="section section-aqua">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Send a Message</span>
-        <h2 class="section-title">Quick <span class="gold">Quote</span> Request</h2>
-        <p class="section-sub">Tell us about your vehicle and what you're looking for . we'll get back to you within a few hours during business hours.</p>
-      </div>
-      <form id="quoteForm" style="max-width:680px;margin:0 auto;background:var(--white);padding:36px 32px;border-radius:24px;box-shadow:var(--shadow-md);" onsubmit="return submitQuote(event);">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;" class="form-row">
-          <div>
-            <label style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:6px;">Your name</label>
-            <input type="text" name="name" required style="width:100%;padding:14px 16px;border:2px solid rgba(94,205,214,0.2);border-radius:12px;font-family:var(--font);font-size:0.95rem;font-weight:600;color:var(--text);background:var(--cream);">
-          </div>
-          <div>
-            <label style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:6px;">Phone</label>
-            <input type="tel" name="phone" required style="width:100%;padding:14px 16px;border:2px solid rgba(94,205,214,0.2);border-radius:12px;font-family:var(--font);font-size:0.95rem;font-weight:600;color:var(--text);background:var(--cream);">
-          </div>
-        </div>
-        <div style="margin-bottom:18px;">
-          <label style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:6px;">Vehicle (year, make, model)</label>
-          <input type="text" name="vehicle" placeholder="e.g. 2022 Honda CR-V" style="width:100%;padding:14px 16px;border:2px solid rgba(94,205,214,0.2);border-radius:12px;font-family:var(--font);font-size:0.95rem;font-weight:600;color:var(--text);background:var(--cream);">
-        </div>
-        <div style="margin-bottom:18px;">
-          <label style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:6px;">Service interest</label>
-          <select name="service" style="width:100%;padding:14px 16px;border:2px solid rgba(94,205,214,0.2);border-radius:12px;font-family:var(--font);font-size:0.95rem;font-weight:600;color:var(--text);background:var(--cream);">
-            <option>Not sure yet. Recommend something</option>
-            <option>Daily Driver package</option>
-            <option>Bob's Signature package</option>
-            <option>Showroom Shine package</option>
-            <option>Ceramic coating</option>
-            <option>Paint correction</option>
-            <option>Interior detailing only</option>
-            <option>Pet hair removal</option>
-            <option>Headlight restoration</option>
-            <option>Maintenance / monthly subscription</option>
-            <option>Fleet detailing</option>
-          </select>
-        </div>
-        <div style="margin-bottom:18px;">
-          <label style="display:block;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:6px;">Notes / preferred date</label>
-          <textarea name="notes" rows="4" placeholder="Anything we should know about the vehicle's condition, preferred date/time, or your address area.." style="width:100%;padding:14px 16px;border:2px solid rgba(94,205,214,0.2);border-radius:12px;font-family:var(--font);font-size:0.95rem;font-weight:600;color:var(--text);background:var(--cream);resize:vertical;"></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold btn-lg btn-full" onclick="gtag('event', 'form_submit', {'page': 'contact'});">Send Quote Request</button>
-        <p style="font-size:0.78rem;color:var(--text-muted);font-weight:600;margin-top:14px;text-align:center;">This opens your email app pre-filled. Or just text us at <a href="tel:4129258970" style="color:var(--aqua-deep);font-weight:700;">(412) 925-8970</a>. Fastest way.</p>
-      </form>
-    </div>
-    <style>
-      @media (max-width: 640px) {
-        .form-row { grid-template-columns: 1fr !important; }
-        .contact-cards-grid { grid-template-columns: 1fr !important; max-width: 420px; }
-        .hours-grid { grid-template-columns: 1fr !important; }
-      }
-    
-
-/* ============================================================
-   DARK THEME OVERRIDE. Black & Gold
-   Inserted after all existing rules so cascade favors these.
-   ============================================================ */
-
-:root {
-  --sky: #000000;
-  --sky-light: #0a0a0a;
-  --sky-pale: #000000;
-  --aqua: #f0d000;
-  --aqua-deep: #d4a800;
-  --aqua-dark: #b8941d;
-  --ocean: #d4a800;
-  --navy: #0a0a0a;
-  --gold: #f0d000;
-  --gold-light: #ffe040;
-  --gold-deep: #d4a800;
-  --orange: #e09000;
-  --white: #1a1a1a;
-  --cream: #0a0a0a;
-  --text: #f5f5f5;
-  --text-light: #c5c5c5;
-  --text-muted: #999999;
-  --bubble: rgba(240, 208, 0, 0.2);
-  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.7);
-  --shadow-gold: 0 4px 20px rgba(240, 208, 0, 0.4);
-}
-
-body {
-  background: #000000 !important;
-  color: #f5f5f5 !important;
-}
-
-/* HEADINGS. Were dark navy, now white with gold accents */
-.hero-title, .section-title, .cta-title, .page-header h1,
-.pkg-name, .pkg-price-amount, .step-title, .trust-title, .faq-q,
-.author-name, .area-info h3, .pricing-ref h3,
-.contact-value, .contact-value a {
-  color: #f5f5f5 !important;
-}
-
-.section-title .gold, .hero-title em, .cta-title .gold,
-.page-header h1 .gold, .section-title .aqua, .page-header h1 .aqua {
-  color: #f0d000 !important;
-  -webkit-text-fill-color: #f0d000 !important;
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-}
-
-.pkg-price-amount, .pricing-ref-item .price, .hero-stat .num {
-  color: #f0d000 !important;
-}
-
-/* NAVBAR. Black with gold accent */
-.navbar {
-  background: rgba(0, 0, 0, 0.92) !important;
-  border-bottom: 1px solid rgba(240, 208, 0, 0.25) !important;
-}
-
-.nav-links > a, .nav-dropdown > .nav-dropdown-trigger,
-.nav-dropdown-trigger {
-  color: #f5f5f5 !important;
-}
-
-.nav-links > a:hover, .nav-links a.active,
-.nav-dropdown:hover > .nav-dropdown-trigger {
-  color: #f0d000 !important;
-}
-
-.nav-toggle span {
-  background: #f0d000 !important;
-}
-
-.nav-dropdown-menu {
-  background: rgba(20, 20, 20, 0.98) !important;
-  border: 1px solid rgba(240, 208, 0, 0.25) !important;
-}
-
-.nav-dropdown-menu a {
-  color: #f5f5f5 !important;
-}
-
-.nav-dropdown-menu a:hover {
-  background: rgba(240, 208, 0, 0.1) !important;
-  color: #f0d000 !important;
-}
-
-/* MOBILE MENU. Dark */
-.mobile-menu {
-  background: rgba(0, 0, 0, 0.98) !important;
-  border-bottom: 1px solid rgba(240, 208, 0, 0.25) !important;
-}
-
-.mobile-link {
-  color: #f5f5f5 !important;
-  border-bottom: 1px solid rgba(240, 208, 0, 0.15) !important;
-}
-
-.mobile-link.indent { color: #c5c5c5 !important; }
-.mobile-section-label { color: #f0d000 !important; }
-
-/* HERO. Was light blue gradient, now black */
-.hero {
-  background: linear-gradient(170deg, #000000, #0a0a0a) !important;
-}
-
-.hero-main, .hero-stat {
-  background: rgba(20, 20, 20, 0.7) !important;
-  border: 1px solid rgba(240, 208, 0, 0.2) !important;
-}
-
-.hero-wave svg path { fill: #0a0a0a !important; }
-
-/* SECTIONS */
-.section-white { background: #0a0a0a !important; }
-.section-aqua {
-  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%) !important;
-}
-
-/* CARDS. Were white, now dark with gold border */
-.pkg-card, .review-card, .gallery-card, .trust-card, .step-card,
-.faq-item, .included-item, .pricing-ref {
-  background: #1a1a1a !important;
-  border: 1px solid rgba(240, 208, 0, 0.12) !important;
-}
-
-.pkg-card.featured {
-  background: linear-gradient(180deg, rgba(240, 208, 0, 0.08) 0%, #1a1a1a 40%) !important;
-  border-color: #f0d000 !important;
-}
-
-.pkg-card:hover, .review-card:hover, .trust-card:hover, .gallery-card:hover {
-  border-color: rgba(240, 208, 0, 0.4) !important;
-}
-
-/* AREA TAGS */
-.area-tag {
-  background: #1a1a1a !important;
-  border: 2px solid rgba(240, 208, 0, 0.2) !important;
-  color: #ffe040 !important;
-}
-.area-tag:hover {
-  border-color: #f0d000 !important;
-  background: rgba(240, 208, 0, 0.1) !important;
-}
-
-/* GLASS BUTTONS. Adjust for dark bg */
-.btn-glass {
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: #f5f5f5 !important;
-  border: 1px solid rgba(240, 208, 0, 0.3) !important;
-}
-.btn-glass:hover {
-  background: rgba(240, 208, 0, 0.15) !important;
-  color: #f0d000 !important;
-  border-color: #f0d000 !important;
-}
-
-/* CTA. Dark with gold framing */
-.cta-section {
-  background: linear-gradient(170deg, #0a0a0a 0%, #000000 100%) !important;
-  border-top: 1px solid rgba(240, 208, 0, 0.3);
-  border-bottom: 1px solid rgba(240, 208, 0, 0.3);
-}
-.cta-title, .cta-sub { color: #f5f5f5 !important; }
-.cta-sub { color: rgba(245, 245, 245, 0.85) !important; }
-
-/* FOOTER. Already dark, keep but gold accents */
-.footer {
-  background: #000000 !important;
-  border-top: 2px solid rgba(240, 208, 0, 0.3);
-}
-.footer-heading { color: #f0d000 !important; }
-
-/* BODY TEXT ON DARK CARDS */
-.pkg-desc, .review-text, .author-location, .trust-desc, .step-desc,
-.faq-a, .section-sub, .hero-sub, .page-header p,
-.area-info > p, .pricing-ref p, .gallery-info p,
-.contact-label {
-  color: #c5c5c5 !important;
-}
-
-.pkg-features li, .included-text {
-  color: #f5f5f5 !important;
-}
-
-/* CHECKMARKS & STEP NUMBERS. Gold */
-.pkg-features li::before {
-  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
-  opacity: 0.9 !important;
-}
-.pkg-features li::after {
-  border-left-color: #000 !important;
-  border-bottom-color: #000 !important;
-}
-.included-check {
-  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
-  color: #000 !important;
-}
-.step-num {
-  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
-  color: #000 !important;
-}
-.trust-icon {
-  background: linear-gradient(135deg, #ffe040, #f0d000) !important;
-}
-
-/* CONTACT ICONS */
-.contact-icon {
-  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
-}
-.contact-icon svg { stroke: #000 !important; }
-.contact-value a:hover { color: #f0d000 !important; }
-
-/* SECTION TAGS / PILLS */
-.section-tag,
-.page-header .section-tag {
-  background: rgba(240, 208, 0, 0.12) !important;
-  color: #ffe040 !important;
-}
-
-/* DIVIDERS */
-.pkg-divider {
-  background: linear-gradient(90deg, rgba(240, 208, 0, 0.5), transparent) !important;
-}
-
-/* GALLERY (before/after) */
-.gallery-before {
-  background: linear-gradient(135deg, #2a2a2a, #1a1a1a) !important;
-  color: #c5c5c5 !important;
-}
-.gallery-after {
-  background: linear-gradient(135deg, #0a0a0a, #000000) !important;
-  color: #f0d000 !important;
-}
-.gallery-label-before {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #c5c5c5 !important;
-}
-.gallery-label-after {
-  background: rgba(240, 208, 0, 0.2) !important;
-  color: #f0d000 !important;
-}
-.gallery-info h4 { color: #f5f5f5 !important; }
-
-/* AREA MAP */
-.area-map-wrap {
-  border: 3px solid rgba(240, 208, 0, 0.3) !important;
-}
-
-/* FORMS */
-input, select, textarea {
-  background: #1a1a1a !important;
-  color: #f5f5f5 !important;
-  border-color: rgba(240, 208, 0, 0.25) !important;
-}
-input:focus, select:focus, textarea:focus {
-  border-color: #f0d000 !important;
-  outline: none !important;
-}
-
-/* PRICING REF (link to packages) */
-.pricing-ref {
-  background: linear-gradient(135deg, rgba(240, 208, 0, 0.05), rgba(20, 20, 20, 1)) !important;
-  border: 2px solid rgba(240, 208, 0, 0.25) !important;
-}
-
-/* BUBBLE OVERLAYS. For animations on index/packages/subs */
-.bubble-reveal-overlay {
-  background: linear-gradient(170deg, #000000, #0a0a0a) !important;
-}
-.van-overlay {
-  background: rgba(0, 0, 0, 0.75) !important;
-}
-
-/* AUTHOR AVATAR */
-.author-avatar {
-  background: linear-gradient(135deg, #f0d000, #d4a800) !important;
-  color: #000 !important;
-}
-
-/* PROMISE BOX (about page) */
-.promise-box {
-  background: #1a1a1a !important;
-  border: 3px solid rgba(240, 208, 0, 0.3) !important;
-}
-
-/* FAQ */
-.faq-q::after { color: #f0d000 !important; }
-.faq-q { color: #f5f5f5 !important; }
-.faq-a { color: #c5c5c5 !important; }
-
-/* MISC text fallbacks */
-.area-info h3 { color: #f5f5f5 !important; }
-.section-header { color: #f5f5f5 !important; }
-</style>
-    <script>
-      function submitQuote(e) {
-        e.preventDefault();
-        const f = e.target;
-        const subject = encodeURIComponent("Quote Request from " + (f.name.value || 'Website'));
-        const body = encodeURIComponent(
-          "Name: " + (f.name.value || '') + "\n" +
-          "Phone: " + (f.phone.value || '') + "\n" +
-          "Vehicle: " + (f.vehicle.value || '') + "\n" +
-          "Service: " + (f.service.value || '') + "\n\n" +
-          "Notes:\n" + (f.notes.value || '')
-        );
-        window.location.href = 'mailto:' + ['bookings', 'bobsdetailingpgh.com'].join('@') + '?subject=' + subject + '&body=' + body;
-        return false;
-      }
-    </script>
-  </section>
-
   <section class="cta-section">
     <div class="bubbles">
       <span class="b1"></span><span class="b2"></span><span class="b3"></span>
@@ -668,13 +356,13 @@ input:focus, select:focus, textarea:focus {
       <h2 class="cta-title">Ready to Book a <span class="gold">Detail</span>?</h2>
       <p class="cta-sub">Same-week appointments. We come to your home or office. 100% satisfaction guarantee.</p>
       <div class="cta-btns">
-        <a href="index.html#lead-form" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'contact'});">Book Online</a>
+        <a href="#lead-form" class="btn btn-gold btn-lg" onclick="gtag('event', 'book_now_click', {'page': 'contact'});">Book Online</a>
         <a href="tel:4129258970" class="btn btn-glass btn-lg" style="background:rgba(255,255,255,0.95);" onclick="gtag('event', 'phone_click', {'location': 'cta'});">Call or Text (412) 925-8970</a>
       </div>
       <div class="cta-trust-row">
         <span class="trust-pill">5.0 Star Rated</span>
         <span class="trust-pill">100% Satisfaction Guarantee</span>
-        <span class="trust-pill">10+ Years Experience</span>
+        <span class="trust-pill">20+ Years Experience</span>
         <span class="trust-pill">Fully Mobile . We Come to You</span>
       </div>
     </div>
@@ -722,8 +410,8 @@ input:focus, select:focus, textarea:focus {
           <a href="robinson.html" class="footer-link">Robinson Township</a>
           <a href="moon-township.html" class="footer-link">Moon Township</a>
           <a href="bridgeville.html" class="footer-link">Bridgeville</a>
-          <a href="packages.html" class="footer-link" style="margin-top:12px;">All Packages &rarr;</a>
-          <a href="subscriptions.html" class="footer-link">Subscriptions &rarr;</a>
+          <a href="/services" class="footer-link" style="margin-top:12px;">All Packages &rarr;</a>
+          <a href="/fleet-group-detailing" class="footer-link">Fleet &amp; Group &rarr;</a>
         </div>
         <div>
           <h5 class="footer-heading">Contact</h5>

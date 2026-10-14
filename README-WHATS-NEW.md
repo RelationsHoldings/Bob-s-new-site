@@ -112,7 +112,7 @@ These items are in the original strategy script but require info or decisions on
 - **Google Business Profile reclaim & optimization** — this is the highest-impact thing you can do. The strategy script (Part 2) walks through it. You need to start the reclaim process via business.google.com.
 - **Fieldd review automation** — set up the SMS + email templates from Part 3 in your Fieldd dashboard. Triggers 2 hours after job completion.
 - **og-image.jpg** — currently using logo.png as fallback. Create a custom 1200x630px image when you have time.
-- **Bob's bio refinement** — the about page uses a story I drafted (10+ years detailing → launched LLC in 2024). If you want to swap it for a more personal version, edit the prose section in `about.html`.
+- **Bob's bio refinement** — the about page uses a story I drafted (20+ years detailing → launched LLC in 2024). If you want to swap it for a more personal version, edit the prose section in `about.html`.
 - **Real-time customer reviews** — the new service & area pages reuse the 3 testimonials from your existing homepage. If you have more reviews, replace them in each new page (search for "Marcus T." to find them).
 - **Adding nav links from existing pages → new pages** — your existing nav is unchanged. If you want me to add a small link or dropdown later so visitors discover the new pages, just say so.
 
