@@ -1695,6 +1695,9 @@ input:focus, select:focus, textarea:focus {
   .lead-form-section { padding: 48px 12px; }
   .lead-form-wrap { padding: 16px 12px; }
 }
+
+/* Trustindex Google reviews widget */
+.reviews-widget { max-width: 1140px; margin: 0 auto; min-height: 220px; }
 </style>
   <script type="text/javascript" src="https://fieldd.me/lead-form"></script>
 </head>
@@ -1966,31 +1969,9 @@ input:focus, select:focus, textarea:focus {
         <h2 class="section-title">What Clients <span class="gold">Say</span></h2>
         <p class="section-sub">Real reviews from real customers on Google. 5-star service every time.</p>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card" data-reveal>
-          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"Bob did an incredible job on 4 cars in one day!! They all look brand new!! His mobile van makes it so easy. We didn't have access to a hose in the winter but it didn't matter with the tank on his van. Thanks for taking such great care of us!!"</p>
-          <div class="review-author">
-            <div class="author-avatar">J</div>
-            <div><p class="author-name">John Henne</p><p class="author-location">Google Review</p></div>
-          </div>
-        </div>
-        <div class="review-card" data-reveal>
-          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"My car looks brand new and not a detail was missed! Bob is fantastic to work with and the best part is that he is mobile and can come straight to you. I had him take care of my car while at work, and it was incredibly convenient. HIGHLY recommend!!!"</p>
-          <div class="review-author">
-            <div class="author-avatar">L</div>
-            <div><p class="author-name">Lauren Breit</p><p class="author-location">Google Review</p></div>
-          </div>
-        </div>
-        <div class="review-card" data-reveal>
-          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
-          <p class="review-text">"Absolutely outstanding service! I couldn't be happier with the results. Bob arrived on time, fully equipped, and handled everything with care and professionalism. My car looks brand new.inside and out."</p>
-          <div class="review-author">
-            <div class="author-avatar">M</div>
-            <div><p class="author-name">Michelle Kirkpatrick</p><p class="author-location">Google Review</p></div>
-          </div>
-        </div>
+      <!-- Google reviews: Trustindex widget (pulls new reviews from Bob's Google Business Profile automatically) -->
+      <div class="reviews-widget">
+        <script defer async src='https://cdn.trustindex.io/loader.js?8e4f98b836476076da6672c6c88'></script>
       </div>
     </div>
   </section>
